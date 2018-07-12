@@ -32,9 +32,11 @@
 
 ## 步骤一 创建VPN网关 {#section_sj5_kmg_xdb .section}
 
-确保您已经切换至新版控台，详情参见[新控制台切换](https://help.aliyun.com/document_detail/66173.html?spm=a2c4g.11186623.2.5.KK5rNc)。
+如果您是经典网络，在VPC内购买的VPN网关配合ClassicLink功能也可以在经典网络中使用。
 
-1.  登录VPC管理控制台。
+完成以下操作，创建VPN网关：
+
+1.  登录新版[VPC管理控制台](https://vpcnext.console.aliyun.com)。
 2.  在左侧导航栏，单击**VPN** \> **VPN网关** 。
 3.  在VPN网关页面，单击**创建VPN网关**。
 4.  在购买页面，配置VPN网关，完成支付。本操作中VPN网关的配置如下：
@@ -65,6 +67,8 @@
 
 ## 步骤二 创建SSL服务端 {#section_v4f_2mg_xdb .section}
 
+完成以下操作，创建SSL服务端：
+
 1.  在专有网络的左侧导航栏，单击**VPN** \> **SSL服务端**。
 2.  单击**创建SSL服务端**。本操作中SSL服务端的配置如下：
     -   **名称**：输入SSL服务端的名称。
@@ -90,6 +94,8 @@
 
 ## 步骤三 创建客户端证书 {#section_zw2_24g_xdb .section}
 
+完成以下操作，创建客户端证书：
+
 1.  在专有网络的左侧导航栏，单击**VPN** \> **SSL客户端** 。
 2.  单击**创建SSL客户端证书**。
 3.  在创建客户端证书对话框，输入客户端证书名称并选择对应的SSL服务端，然后单击**确定**。
@@ -99,6 +105,8 @@
 
 
 ## 步骤四 客户端配置 {#section_qdz_j4g_xdb .section}
+
+完成以下操作，配置客户端：
 
 1.  执行以下命令安装OpenVPN客户端。
 
@@ -137,6 +145,8 @@
 
 
 ## 步骤五 建立ClassicLink连接 {#section_sk4_n4g_xdb .section}
+
+完成以下操作，建立ClassicLink连接：
 
 1.  登录专有网络管理控制台。
 2.  选择目标专有网络的地域，然后单击目标专有网络的ID链接。
