@@ -30,7 +30,7 @@
 
 ## 8. VPC互通流量是否经过Internet？ {#section_zdq_n3h_xdb .section}
 
-不经过。通过VPN实现跨地域VPC互访，流量经过阿里云骨干网，不经过Internet。
+不经过。通过VPN实现跨地域VPC互访，流量经过阿里云网络，不经过Internet。
 
 ## 9. 是否支持在一个IPsec连接中配置多个对端网段？ {#section_a2q_n3h_xdb .section}
 
