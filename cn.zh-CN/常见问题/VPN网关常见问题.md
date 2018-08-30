@@ -14,11 +14,11 @@
 
 ## 4. 支持的本地网关设备型号？ {#section_vdq_n3h_xdb .section}
 
-阿里云VPN网关支持标准的IKEv1和IKEv2协议。因此，只要支持这两种协议的设备都可以和云上VPN网关互连，比如华为、华三、山石、深信服、Cisco ASA、Juniper、SonicWall、Nokia、IBM 和 Ixia等。详情参见[本地网关配置](../../../../intl.zh-CN/最佳实践/本地网关配置.md#)。
+阿里云VPN网关支持标准的IKEv1和IKEv2协议。因此，只要支持这两种协议的设备都可以和云上VPN网关互连，比如华为、华三、山石、深信服、Cisco ASA、Juniper、SonicWall、Nokia、IBM 和 Ixia等。详情参见[华三防火墙配置](../../../../intl.zh-CN/最佳实践/本地网关配置/华三防火墙配置.md#)。
 
 ## 5. 是否支持SSL-VPN？ {#section_wdq_n3h_xdb .section}
 
-支持，详情参见[SSL-VPN](https://help.aliyun.com/document_detail/65282.html)。
+支持，详情参见[教程概述](../../../../intl.zh-CN/SSL-VPN入门/教程概述.md#)。
 
 ## 6. 每个VPN网关可以建立多少个IPsec连接？ {#section_xdq_n3h_xdb .section}
 
