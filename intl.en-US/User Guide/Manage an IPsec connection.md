@@ -1,6 +1,6 @@
 # Manage an IPsec connection {#concept_hpr_byc_xdb .concept}
 
-After creating a VPN Gateway and a customer gateway, you can create an IPsec connection. The IPsec connection will allow you to connect the VPN Gateway and the customer gateway, establishing a VPN tunnel.
+After creating a VPN Gateway and a customer gateway, you can create an IPsec connection. The IPsec connection allows you to connect the VPN Gateway and the customer gateway, thus establishing a VPN tunnel.
 
 ## Create an IPsec connection {#section_mxd_fyc_xdb .section}
 
@@ -21,7 +21,7 @@ Follow these steps to create an IPsec connection:
  |
     |**VPN Gateway**|Select the VPN Gateway to connect.|
     |**Customer Gateway**|Select the customer gateway to connect.|
-    |Local Network|Enter the IP address range of the VPC to be connected with the local data center, which is used for second-stage negotiation. You can enter multiple IP address ranges and separate them by commas. For example, 192.168.1.0/24, 192.168.2.0/24.**Note:** If multiple IP address ranges are entered, the IKEv2 must be selected.
+    |**Local Network**|Enter the IP address range of the VPC to be connected with the local data center, which is used for second-stage negotiation. You can enter multiple IP address ranges and separate them by commas. For example, 192.168.1.0/24, 192.168.2.0/24.**Note:** If multiple IP address ranges are entered, the IKEv2 must be selected.
 
 |
     |**Remote Network**|Enter the IP address range of the local data center to be connected with the VPC. This is used for second-stage negotiation. You can enter multiple IP address ranges and separate them by commas. For example, 172.10.1.0/24,172.10.2.0/24.**Note:** If multiple IP address ranges are entered, the IKEv2 must be selected.
@@ -66,7 +66,7 @@ Follow these steps to download the IPsec connection configuration:
 
     For example, if you set the local network to 192.168.0.0/16 and the remote network to 10.0.0.0/8 in an IPsec connection, the downloaded IPsec connection configuration is as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15349330513317_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15380443083317_en-US.png)
 
 
 ## Edit an IPsec connection {#section_eyd_fyc_xdb .section}
@@ -99,4 +99,7 @@ Follow these steps to view IPsec connection logs:
 3.  On the IPsec Connections page, select the region of the target IPsec connection.
 4.  Click **View Logs** in the **Actions** column of the target IPsec connection.
 5.  On the displayed page, configure the time range of the logs to view.
+
+    ![](images/3342_en-US.png)
+
 
