@@ -11,7 +11,7 @@
 -   strongSwan的公网IP地址是59.110.165.70
 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13369/3583_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13369/15382958993583_zh-CN.png)
 
 ## 前提条件 {#section_tpp_k5f_xdb .section}
 
