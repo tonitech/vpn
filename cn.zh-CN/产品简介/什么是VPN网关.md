@@ -4,7 +4,7 @@ VPN网关是一款基于Internet，通过加密通道将企业数据中心、企
 
 **说明：** 阿里云VPN网关在国家相关政策法规内提供服务，不提供访问Internet功能。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13431/3233_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13431/15382936503233_zh-CN.png)
 
 ## 功能 {#section_c4z_jsx_wdb .section}
 
