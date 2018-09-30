@@ -12,13 +12,13 @@ Total cost of each VPN gateway= instance retention fee + traffic fee + SSL speci
 
     Each VPN gateway is calculated separately. The instance configuration fee is billed on an hourly basis. The fee is deducted in real time and partial hours are billed as full hours.
 
-    **Note:** Two VPN Gateway specifications are available to use: 10 Mbps and 100 Mbps.
+    **Note:** Two VPN Gateway specifications are available: 10 Mbps and 100 Mbps
 
 -   Traffic fee:
 
     Each VPN gateway is calculated separately. Cumulative outbound traffic of the VPN gateway in an hour is billed. Inbound traffic is not billed. Outbound traffic refers to data transferred from the Alibaba Cloud data center to the Internet. The reverse is inbound traffic.
 
--   SSL specification fee:
+-   SSL specification fee
 
     After the SSL-VPN function is enabled, you must select the SSL specification according to the maximum number of clients connected simultaneously. The fee varies by specification. 
 
@@ -63,7 +63,7 @@ The VPN gateway offers different bandwidth specifications, and the instance fee 
 
 ## SSL specification fee {#section_dst_mzx_wdb .section}
 
-After the SSL-VPN function is enabled, you must select the SSL specification according to the maximum number of clients connected simultaneously. The fee varies by specification. 
+After the SSL-VPN function is enabled, you must select the SSL specification according to the maximum number of clients connected simultaneously. The fee varies by specification.
 
 **Note:** The prices in the following table are only for reference. Take the prices on the purchase page as standard.
 
