@@ -2,7 +2,7 @@
 
 This tutorial illustrates how to create an IPsec connection over the IPsec-VPN tunnel to connect two VPCs.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390511053319_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390512323319_en-US.png)
 
 The following two VPCs under the same account are used as an example in this tutorial. The procedure of connecting two VPCs of different accounts is the same as connecting two VPCs under the same account. The only difference is that you must obtain the public IP address of the peer VPN Gateway and use this IP address to create a customer Gateway.
 
@@ -11,7 +11,7 @@ The following two VPCs under the same account are used as an example in this tut
 |VPC1|172.16.0.0/12|vpc-xxxxz0|ECS 1|
 |VPC2|10.0.0.0/8|vpc-xxxxut|ECS2|
 
-**Note:** Note: VPN gateways enable communication by creating an encrypted tunnel over the Internet, and thus the communication performance depends on the quality of Internet connection. If the requirement on the communication quality is high, you can use Express Connect. For more information, see [Cross-account VPC communication](https://help.aliyun.com/document_detail/44843.html) and [Cross-region VPC communication](https://help.aliyun.com/document_detail/44842.html).
+**Note:** VPN gateways enable communication by creating an encrypted tunnel over the Internet, and thus the communication performance depends on the quality of Internet connection. If the requirement on the communication quality is high, you can use Express Connect. For more information, see [Cross-account VPC communication](https://help.aliyun.com/document_detail/44843.html) and [Cross-region VPC communication](https://help.aliyun.com/document_detail/44842.html).
 
 ## Prerequisites {#section_q3w_ylz_wdb .section}
 
@@ -39,7 +39,7 @@ The IP address ranges of these two VPCs are not in conflict.
 
 **Note:** You can only configure this option after you enables the SSL-VPN feature.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15390511053313_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15390512323313_en-US.png)
 
 5.  Repeat the preceding steps to create a VPN gateway for the other VPC.
 
@@ -47,7 +47,7 @@ The IP address ranges of these two VPCs are not in conflict.
 
     **Note:** It usually takes 1-5 minutes to create a VPN gateway.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390511063320_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390512323320_en-US.png)
 
     In this tutorial, the public IP address assigned is 121. XXX. XX.143 and 118. XXX. XX.149, as shown in the following table.
 
@@ -129,11 +129,11 @@ After creating the VPN gateways and the customer gateways, you must create two I
 
     In this tutorial, the IPsec connection configurations of VPC1 is as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390511063321_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390512323321_en-US.png)
 
     In this tutorial, the IPsec connection configurations of VPC2 is as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390511063322_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390512323322_en-US.png)
 
 
 ## Step 4: Configure routes {#section_k1m_cpz_wdb .section}
@@ -163,5 +163,5 @@ After creating the VPN gateways and the customer gateways, you must create two I
 
 Log on to the ECS1, and then Ping the private IP address of the ECS2 to check whether the connection is established.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390511063323_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15390512323323_en-US.png)
 
