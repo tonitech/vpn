@@ -33,7 +33,7 @@ To use IPsec-VPN to connect different sites, you must:
 
 4.  Configure the local gateway.
 
-    Configure the local gateway according to the IPsec connection configurations. For more information, see [Local gateway configurations](https://help.aliyun.com/document_detail/60045.html).
+    Configure the local gateway according to the IPsec connection configurations.
 
 5.  Configure the route and security groups.
 
