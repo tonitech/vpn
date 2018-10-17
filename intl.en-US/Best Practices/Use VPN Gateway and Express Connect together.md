@@ -6,7 +6,7 @@ Multinational corporations can use Express Connect to connect two VPCs from diff
 
 Multinational corporations often have the need to deploy applications in multiple countries and interconnect Operation and Maintenance systems around the world. For example, an enterprise deploys two sets of applications in the eastern United States and Shanghai, and needs to connect offices worldwide as shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13371/15382959383594_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13371/15397767383594_en-US.png)
 
 ## Solution overview {#section_a3r_yxf_xdb .section}
 
@@ -22,7 +22,7 @@ Alibaba Cloud provides secure, high-quality, and relatively low-cost solution fo
 
 You can use Express Connect to connect two VPCs and use VPN Gateway to connect the office sites to VPCs as shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13371/15382959383595_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13371/15397767383595_en-US.png)
 
 ## Prerequisites { .section}
 
@@ -63,8 +63,6 @@ Follow procedures in Step 1 to create two IPsec connections to connect the offic
 You can connect the two VPCs by creating a pair of Express Connect router interfaces. For more information, see [VPC interconnection](https://help.aliyun.com/document_detail/44842.html).
 
 The router interface configuration in this tutorial is shown in the following figure.
-
-![](images/3596_en-US.png)
 
 ## Step 4: Configure the route { .section}
 
