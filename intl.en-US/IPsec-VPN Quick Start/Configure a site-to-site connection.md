@@ -2,7 +2,7 @@
 
 This document illustrates how to create a site-to-site connection to connect a VPC with a local data center.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15382948113312_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15401928433312_en-US.png)
 
 ## Prerequisites {#section_q3w_ylz_wdb .section}
 
@@ -31,13 +31,13 @@ You must meet the following requirements before creating an IPsec connection:
 
     -   **IPsec-VPN**: Select whether to enable the IPsec-VPN feature.
 
-    -   **SSL-VPN**:  Select whether to enable the SSL-VPN feature. The SSL-VPN feature allows you to connect to a VPC from a single computer anywhere.
+    -   **SSL-VPN**: Select whether to enable the SSL-VPN feature. The SSL-VPN feature allows you to connect to a VPC from a single computer anywhere.
 
     -   **Concurrent SSL Connections**: Select the maximum number of clients you want to connect to simultaneously.
 
 **Note:** You can only configure this option after you enables the SSL-VPN feature.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15382948113313_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15401928433313_en-US.png)
 
 5.  Go back to the VPN Gateways page, select **China \(Hangzhou\)** region to view the created VPN Gateway.
 
@@ -52,14 +52,13 @@ You must meet the following requirements before creating an IPsec connection:
 2.  Click the China \(Hangzhou\) region.
 3.  On the Customer Gateways page, click **Create Customer Gateway**.
 4.  Configure the customer gateway according to the following information:
-
     -   **Name**: Enter a customer gateway name.
 
     -   **IP Address**: Enter the public IP configured for the local gateway. In this tutorial, 211.167.68.68 is used.
 
     -   **Description**: Enter the description of the customer gateway.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15382948113314_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15401928433314_en-US.png)
 
 5.  On the Create Customer Gateway page, click **Add +** to add multiple customer gateways.
 
@@ -83,7 +82,7 @@ You must meet the following requirements before creating an IPsec connection:
 
         Use the default configuration for other options.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15382948113315_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15401928433315_en-US.png)
 
 
 ## Step 4: Configure the local gateway {#section_ptn_44z_wdb .section}
@@ -92,13 +91,13 @@ You must meet the following requirements before creating an IPsec connection:
 2.  Select the China \(Hangzhou\) region.
 3.  Find the target IPsec connection and click **Download Config**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15382948113316_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15401928433316_en-US.png)
 
-4.  Configure the local gateway accordingly. For more information, see [Local gateway configuration](https://help.aliyun.com/document_detail/60045.html).
+4.  Configure the local gateway accordingly.
 
     The RemoteSubnet and LocalSubnet in the download configuration are the opposite of the local network and the remote network when creating an IPsec connection. From the perspective of VPN Gateway, the remote network is the local IDC and the local network is the VPC. From the perspective of local IDC, the remote network is the VPC and the local network is the local IDC.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15382948123317_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15401928433317_en-US.png)
 
 
 ## Step 5: Configure the route {#section_k1m_cpz_wdb .section}
@@ -114,7 +113,7 @@ You must meet the following requirements before creating an IPsec connection:
 
     -   **VPN Gateway**: Select the created VPN gateway.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15382948123318_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15401928433318_en-US.png)
 
 
 ## Step 6: Verify the connection {#section_ojw_ylz_wdb .section}
