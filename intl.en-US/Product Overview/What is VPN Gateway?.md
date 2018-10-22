@@ -4,7 +4,7 @@ VPN Gateway is an Internet-based service that securely and reliably connect ente
 
 **Note:** Alibaba Cloud VPN Gateway provides services according to national policies and laws and does not provide the function of accessing the Internet.
 
-![](images/3233_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13346/15401912166217_en-US.png)
 
 ## Function {#section_c4z_jsx_wdb .section}
 
