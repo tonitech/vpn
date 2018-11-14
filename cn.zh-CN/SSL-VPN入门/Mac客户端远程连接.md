@@ -1,8 +1,8 @@
 # Mac客户端远程连接 {#concept_a1t_jvz_wdb .concept}
 
-本文以Mac操作系统的客户端为例介绍如何通过VPN网关拨号接入VPC。
+本文以Mac客户端为例介绍如何通过VPN网关拨号接入VPC。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13356/15382950243332_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13356/15421872153332_zh-CN.png)
 
 ## 开始之前 {#section_wwc_lvz_wdb .section}
 
@@ -35,7 +35,7 @@
 
 **说明：** 本选项只有在选择开启了SSL-VPN功能后才可配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950243325_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15421872153325_zh-CN.png)
 
 5.  返回VPN网关页面，选择华东1地域，查看创建的VPN网关。
 
@@ -43,7 +43,7 @@
 
     **说明：** VPN网关的创建一般需要1-5分钟。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950253326_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15421872153326_zh-CN.png)
 
 
 ## 步骤二 创建SSL服务端 {#section_txk_4wz_wdb .section}
@@ -60,7 +60,7 @@
 
     -   高级配置：使用默认高级配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950253327_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15421872153327_zh-CN.png)
 
 
 ## 步骤三 创建客户端证书 {#section_ddh_5wz_wdb .section}
@@ -71,7 +71,7 @@
 
 4.  在SSL客户端页面，找到已创建的客户端证书，然后单击**下载**下载生成的客户端证书。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950253328_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15421872163328_zh-CN.png)
 
 
 ## 步骤四 客户端配置 {#section_zny_zwz_wdb .section}
@@ -102,6 +102,7 @@
     3.  执行以下命令解压证书文件：
 
         ```
+        cd  /usr/local/certificates 
         unzip /usr/local/etc/openvpn/certs6.zip
         ```
 
@@ -118,5 +119,5 @@
 
 **说明：** 确保测试的ECS实例的安全组规则允许客户端远程连接。详情参考[安全组配置案例](https://help.aliyun.com/document_detail/58746.html)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950253329_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15421872163329_zh-CN.png)
 
