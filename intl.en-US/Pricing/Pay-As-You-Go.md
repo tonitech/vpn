@@ -31,18 +31,21 @@ The VPN gateway offers different bandwidth specifications, and the instance fee 
 
 **Note:** The prices in the following table are only for reference. Take the prices on the purchase page as standard.
 
-|Region|10 Mbps \(USD/hour\)|100 Mbps \(USD/hour\)|
-|:-----|:-------------------|:--------------------|
-|Mainland China|0.059|0.209|
-|Singapore|0.087|0.262|
-|Australia \(Sydney\)|0.087|0.389|
-|US \(Virginia\)|0.066|0.295|
-|US \(Silicon Valley\)|0.082|0.392|
-|Germany \(Frankfurt\)|0.077|0.359|
-|Malaysia \(Kuala Lumpur\)|0.080|0.240|
-|UAE \(Dubai\)|0.090|0.420|
-|Japan \(Tokyo\)|0.091|0.275|
-|India \(Mumbai\)|0.082|0.249|
+|Region|10 Mbps \(USD/hour\)|100 Mbps \(USD/hour\)|200 Mbps \(USD/hour\)|500 Mbps \(USD/hour\)|1000 Mbps \(USD/hour\)|
+|:-----|:-------------------|:--------------------|---------------------|---------------------|----------------------|
+|Mainland China|0.059|0.209|0.209|0.767|0.767|
+|Hong Kong|0.087|0.262|0.262|1.025|1.025|
+|Singapore|0.087|0.262|0.262|1.025|1.025|
+|Australia \(Sydney\)|0.087|0.389|0.389|1.088|1.088|
+|US \(Virginia\)|0.066|0.295|0.295|0.826|0.826|
+|US \(Silicon Valley\)|0.082|0.392|0.392|1.095|1.095|
+|Germany \(Frankfurt\)|0.077|0.359|0.359|1.003|1.095|
+|Malaysia \(Kuala Lumpur\)|0.080|0.240|0.240|0.878|0.878|
+|UAE \(Dubai\)|0.090|0.420|0.420|1.231|1.231|
+|Japan \(Tokyo\)|0.091|0.275|0.275|0.767|0.767|
+|India \(Mumbai\)|0.082|0.249|0.249|0.697|0.697|
+|Indonesia \(Jakarta\)|0.087|0.262|0.262|0.734|0.734|
+|UK\(London\)|0.077|0.359|0.359|1.003|1.003|
 
 ## Traffic fee {#section_jrt_mzx_wdb .section}
 
