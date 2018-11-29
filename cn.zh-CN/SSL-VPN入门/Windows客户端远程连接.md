@@ -2,7 +2,7 @@
 
 本文以Windows操作系统的客户端为例介绍如何通过VPN网关拨号接入VPC。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950163324_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967833324_zh-CN.png)
 
 ## 开始之前 {#section_kyr_zfq_g2b .section}
 
@@ -35,7 +35,7 @@
 
 **说明：** 本选项只有在选择开启了SSL-VPN功能后才可配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950163325_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967843325_zh-CN.png)
 
 5.  返回VPN网关页面，选择华东1地域，查看创建的VPN网关。
 
@@ -43,7 +43,7 @@
 
     **说明：** VPN网关的创建一般需要1-5分钟。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950163326_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967843326_zh-CN.png)
 
 
 ## 步骤二 创建SSL服务端 {#section_syr_zfq_g2b .section}
@@ -60,7 +60,7 @@
 
     -   高级配置：使用默认高级配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950163327_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967843327_zh-CN.png)
 
 
 ## 步骤三 创建客户端证书 {#section_xyr_zfq_g2b .section}
@@ -71,7 +71,7 @@
 
 4.  在SSL客户端页面，找到已创建的客户端证书，然后单击**下载**下载生成的客户端证书。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950163328_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967843328_zh-CN.png)
 
 
 ## 步骤四 客户端配置 {#section_azr_zfq_g2b .section}
@@ -82,14 +82,14 @@
 2.  将步骤三中下载的证书解压后复制到OpenVPN安装目录中的config文件夹中。
 3.  单击**Connect**发起连接。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13355/15382950163331_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13355/15434967843331_zh-CN.png)
 
 
 ## 步骤五 连接测试 {#section_dzr_zfq_g2b .section}
 
 在客户端ping已连接的VPC内的一台ECS实例，测试连通性。
 
-**说明：** 确保测试的ECS实例的安全组规则允许客户端远程连接。详情参考[安全组配置案例](https://help.aliyun.com/document_detail/58746.html)。
+**说明：** 确保测试的ECS实例的安全组规则允许客户端远程连接。详情参考[安全组规则的典型应用](../../../../intl.zh-CN/用户指南/安全组/安全组规则的典型应用.md#)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15382950163329_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967843329_zh-CN.png)
 

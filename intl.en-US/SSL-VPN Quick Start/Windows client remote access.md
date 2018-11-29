@@ -2,7 +2,7 @@
 
 This document illustrates how to use SSL-VPN to connect a VPC from a remote computer with the Windows operating system.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15427688293324_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967893324_en-US.png)
 
 ## Prerequisites {#section_kyr_zfq_g2b .section}
 
@@ -35,7 +35,7 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
 **Note:** You can only configure this option after you enables the SSL-VPN feature.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15427688293325_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967893325_en-US.png)
 
 5.  Go back to the VPN Gateways page, select China \(Hangzhou\) region to view the created VPN Gateway.
 
@@ -43,7 +43,7 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
     **Note:** It usually takes 1-5 minutes to create a VPN Gateway.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15427688293326_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967893326_en-US.png)
 
 
 ## Step 2: Create an SSL server {#section_syr_zfq_g2b .section}
@@ -60,7 +60,7 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
     -   Advanced Configuration: Use the default advanced configuration.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15427688293327_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967893327_en-US.png)
 
 
 ## Step 3: Create a client certificate {#section_xyr_zfq_g2b .section}
@@ -71,7 +71,7 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
 4.  On the SSL Clients page, find the created SSL client certificate, and then click **Download**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15427688293328_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967893328_en-US.png)
 
 
 ## Step 4: Configure Windows clients {#section_azr_zfq_g2b .section}
@@ -82,7 +82,7 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 2.  Extract the client certificates downloaded in step 3 and copy the certificates to the /etc/openvpn/conf/ directory.
 3.  Click **Connect** to initiate the connection.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13355/15427688293331_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13355/15434967893331_en-US.png)
 
 
 ## Step 5: Verify the connection {#section_dzr_zfq_g2b .section}
@@ -91,5 +91,5 @@ On the client, ping the private IP address of an ECS instance in the connected V
 
 **Note:** Make sure that the security rule of the ECS instance allow remote access. For more information, see [Add security group rules](https://help.aliyun.com/document_detail/58746.html).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15427688293329_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434967893329_en-US.png)
 
