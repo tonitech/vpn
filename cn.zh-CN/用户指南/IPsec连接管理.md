@@ -53,7 +53,7 @@
 
 ## 下载配置 {#section_ayd_fyc_xdb .section}
 
-配置IPsec连接并协商成功后，您可以下载IPsec连接配置，将该配置加载到本地网关设备中。详情参见[本地网关配置](https://help.aliyun.com/document_detail/60045.html)。
+配置IPsec连接并协商成功后，您可以下载IPsec连接配置，将该配置加载到本地网关设备中。详情参见[华三防火墙配置](../intl.zh-CN/最佳实践/本地网关配置/华三防火墙配置.md#)[strongSwan配置](../intl.zh-CN/最佳实践/本地网关配置/strongSwan配置.md#)。
 
 完成以下操作，下载IPsec连接配置：
 
@@ -66,7 +66,7 @@
 
     比如您在配置IPsec连接时，输入的本端网段为192.168.0.0/16，对端网段为172.16.0.0/12，下载的IPsec连接配置如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/3317_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15434982203317_zh-CN.png)
 
 
 ## 编辑IPsec连接配置 {#section_eyd_fyc_xdb .section}
@@ -100,6 +100,6 @@
 4.  单击目标IPsec连接**操作**列下的**查看日志**。
 5.  在弹出的页面，设置要查看的日志的时间，查看日志。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13359/3342_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13359/15434982203342_zh-CN.png)
 
 

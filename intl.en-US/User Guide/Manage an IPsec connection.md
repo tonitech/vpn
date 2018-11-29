@@ -16,7 +16,7 @@ Follow these steps to create an IPsec connection:
     |:------------|:----------|
     |**Name**| Enter the name of the IPsec connection.
 
- The name can contain 2-128 English letters, numbers, hyphens, or underlines, and must start with English letters.
+ The name can contain 2-128 English letters, numbers, hyphens, or underscores, and must start with English letters.
 
  |
     |**VPN Gateway**|Select the VPN Gateway to connect.|
@@ -36,15 +36,15 @@ Follow these steps to create an IPsec connection:
     |**Negotiation Mode**|Select the negotiation mode of the IKEv1.    -   Main mode: The negotiation process features high security.
     -   Aggressive mode: The negotiation is fast and the success rate of negotiation is high.
 After the negotiation succeeds, the information transmission security is the same for the two modes.|
-    |**Encryption Algorithm**|Select an encryption algorithm used by first-stage negotiation from the following options: aes, aes192, aes196, des, and 3des|
-    |**Authentication Algorithm**|Select an authentication algorithm used by first-stage negotiation from the following options: sha1 or md5|
+    |**Encryption Algorithm**|Select an encryption algorithm used by first-stage negotiation from the following options: aes, aes192, aes256, des, and 3des.|
+    |**Authentication Algorithm**|Select an authentication algorithm used by first-stage negotiation from the following options: sha1 or md5.|
     |**DH Group**|Select a Diffie-Hellman key exchange algorithm used by first-stage negotiation.|
     |**SA Life Cycle \(seconds\)**|Set the SA lifecycle for the first-stage negotiation. The default value is 86,400 seconds.|
     |**LocalId**|It is the identification of the VPN Gateway used for the first-stage negotiation. The default value is the public IP address of the VPN Gateway. If you set the LocalId in the FQDN format, we recommend that you change the negotiation mode to the aggressive mode.|
     |**RemoteId**|It is the identification of the customer gateway used for the first-stage negotiation. The default value is the public IP address of the customer gateway. If you set the RemoteId in the FQDN format, we recommend that you change the negotiation mode to the aggressive mode.|
     |**Advanced Configuration: IPSec Configuration**|
-    |**Encryption Algorithm**|Select the encryption algorithm of second-stage negotiation from the following options: aes, aes192, aes196, des, or 3des.|
-    |**Authentication Algorithm**|Select an authentication algorithm used by second-stage negotiation from the following options: sha1 or md5|
+    |**Encryption Algorithm**|Select the encryption algorithm of second-stage negotiation from the following options: aes, aes192, aes256, des, or 3des.|
+    |**Authentication Algorithm**|Select an authentication algorithm used by second-stage negotiation from the following options: sha1 or md5.|
     |**DH Group**|Select a Diffie-Hellman key exchange algorithm used by second-stage negotiation.    -   If you select any group that are not disabled, the PFS feature is enabled by default \(perfect forward secrecy\), so the key must be updated for each renegotiation and PFS must be enabled on the client.
     -   For clients that do not support PFS, select Disabled.
 |
@@ -53,7 +53,7 @@ After the negotiation succeeds, the information transmission security is the sam
 
 ## Download the configuration {#section_ayd_fyc_xdb .section}
 
-After the IPsec connection is configured and the negotiation succeeds, you can download the IPsec connection configuration and configure the local gateway. For more information, see [Local gateway configurations](https://help.aliyun.com/document_detail/60045.html).
+After the IPsec connection is configured and the negotiation succeeds, you can download the IPsec connection configuration and configure the local gateway. For more information, see [Configure H3C firewall](../reseller.en-US/Best Practices/Local gateway configurations/Configure H3C firewall.md#)[Configure strongSwan](../reseller.en-US/Best Practices/Local gateway configurations/Configure strongSwan.md#).
 
 Follow these steps to download the IPsec connection configuration:
 
@@ -66,7 +66,7 @@ Follow these steps to download the IPsec connection configuration:
 
     For example, if you set the local network to 192.168.0.0/16 and the remote network to 10.0.0.0/8 in an IPsec connection, the downloaded IPsec connection configuration is as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15397759313317_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15434982253317_en-US.png)
 
 
 ## Edit an IPsec connection {#section_eyd_fyc_xdb .section}
@@ -90,7 +90,7 @@ Follow these steps to delete an IPsec connection:
 
 ## View IPsec connection logs {#section_jyd_fyc_xdb .section}
 
-You can view the IPsec connection logs for the previous month. You can troubleshoot IPsec connection errors by analyzing the connection logs. The maximum time range is 10 minutes.
+You can view the IPsec connection logs in the previous month. You can troubleshoot IPsec connection errors by analyzing the connection logs. The maximum time range is 10 minutes.
 
 Follow these steps to view IPsec connection logs:
 
@@ -99,4 +99,7 @@ Follow these steps to view IPsec connection logs:
 3.  On the IPsec Connections page, select the region of the target IPsec connection.
 4.  Click **View Logs** in the **Actions** column of the target IPsec connection.
 5.  On the displayed page, configure the time range of the logs to view.
+
+    ![](images/3342_en-US.png)
+
 
