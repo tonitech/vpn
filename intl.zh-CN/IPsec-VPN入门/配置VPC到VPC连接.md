@@ -2,7 +2,7 @@
 
 本文介绍如何使用VPN网关建立VPC到VPC连接，从而两个VPC内的资源可以互访。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15382948273319_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15434965143319_zh-CN.png)
 
 本操作以同一个账号下的两个VPC为例。如果是跨账号VPC互通，操作步骤和同账号VPC互通一样。只是在创建用户网关前，需要获取对方账号的VPN网关的公网IP地址，然后使用获取的对方账号的公网IP地址创建用户网关。
 
@@ -11,7 +11,7 @@
 |VPC1|172.16.0.0/12|vpc-xxxxz0|ECS1|
 |VPC2|10.0.0.0/8|vpc-xxxxut|ECS2|
 
-**说明：** VPN 网关是基于Internet建立加密隧道进行通信，通信质量依赖Internet。如果对通信质量要求高，可以使用高速通道，详情参考[跨账号VPC互通](https://help.aliyun.com/document_detail/44843.html)和[跨地域VPC互通](https://help.aliyun.com/document_detail/44842.html)。
+**说明：** VPN 网关是基于Internet建立加密隧道进行通信，通信质量依赖Internet。如果对通信质量要求高，可以使用高速通道，详情参考[同账号VPC互连](../../../../intl.zh-CN/快速入门/同账号VPC互连.md#)和[跨账号VPC互连](../../../../intl.zh-CN/快速入门/跨账号VPC互连.md#)。
 
 ## 开始之前 {#section_q3w_ylz_wdb .section}
 
@@ -39,7 +39,7 @@
 
 **说明：** 本选项只有在选择开启了SSL-VPN功能后才可配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15382948273313_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15434965153313_zh-CN.png)
 
 5.  重复上述步骤，为另外一个VPC创建一个VPN网关。
 
@@ -47,7 +47,7 @@
 
     **说明：** VPN网关的创建一般需要1-5分钟。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15382948273320_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15434965153320_zh-CN.png)
 
     本例中分配的公网IP地址为121.xxx.xx.143和118.xxx.xx.149，如下表所示。
 
@@ -129,11 +129,11 @@
 
     本操作中，VPC1的IPsec连接配置如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15382948273321_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15434965153321_zh-CN.png)
 
     本操作中，VPC2的IPsec连接配置如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15382948273322_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15434965153322_zh-CN.png)
 
 
 ## 步骤四 设置路由 {#section_k1m_cpz_wdb .section}
@@ -163,5 +163,5 @@
 
 在专有网络VPC1内的ECS1实例上ping ECS2 实例的私网IP，测试两个VPC的私网通信。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15382948273323_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15434965153323_zh-CN.png)
 
