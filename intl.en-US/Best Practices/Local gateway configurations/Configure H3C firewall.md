@@ -2,7 +2,7 @@
 
 When using IPsec-VPN to create a site-to-site connection, you must configure the local gateway according to the IPsec connection configured for the Alibaba Cloud VPN Gateway. This document takes H3C firewall as an example to show how to configure the VPN settings.
 
--   Make sure you have configured IPsec connections. For more information, see [Configure a site-to-site connection.](https://help.aliyun.com/document_detail/65072.html?spm=a2c4g.11186623.2.3.02pwkT).
+-   Make sure you have configured IPsec connections. For more information, see [Configure a site-to-site connection](../../../../reseller.en-US/IPsec-VPN Quick Start/Configure a site-to-site connection.md#).
 
 -   After you create an IPsec connection, download the configurations of the created IPsec connection.
 
@@ -24,38 +24,51 @@ When using IPsec-VPN to create a site-to-site connection, you must configure the
 |DH Group|group2|
 |IKE Version|ikev1|
 |SA Life Cycle \(seconds\)|86400|
-|Negotiation Mode|esp|
+|Security Protocol|esp|
 
     -   Network configuration
 
 |Configuration|Value|
 |:------------|:----|
-|VPC configuration|Private IP address range|192.168.10.0/24|
+|VPC|Private CIDR block|192.168.10.0/24|
 |Public IP of VPN Gateway|101.xxx.xxx.127|
-|IDC network configuration|Private IP address range|192.168.66.0/24|
+|IDC|Private CIDR block|192.168.66.0/24|
 |Public IP of local gateway|122.xxx.xxx.248|
-|Uplink Ethernet Ports|Reth 1|
-|Downlink Ethernet Ports|G 2/0/10|
+|Uplink public port|Reth 1|
+|Downlink private port|G 2/0/10|
 
 
-1.   Log on to the console of the H3C firewall, and then click**Network** \> **VPN** \> **IPSec** \> **Policy** . 
-2.   Configure the H3C firewall IPsec policy based on the IPsec configurations of the Alibaba Cloud VPN Gateway.  Click **Add** in the **Protected Data Stream** list, set the IP address range of the IDC to the source IP and the IP address range of the VPC to the destination IP. 
-3.   Click**IKE Proposal** \> **Create**. Configure IKE proposal according to the IKE information of the IPsec connection configured for the Alibaba Cloud VPN Gateway.
+1.   Log on to the console of the H3C firewall, and then click**Network** \> **VPN** \> **IPsec** \> **Policy** . 
+2.   Configure the H3C firewall IPsec policy based on the IPsec configurations of the Alibaba Cloud VPN Gateway. Click **Add** in the **Protected Data Stream** list, set the IP address range of the IDC to the source IP and the IP address range of the VPC to the destination IP. 
+
+    ![](images/3543_en-US.png)
+
+3.   Click**IKE Proposal** \> **Create**. Configure IKE proposal according to the IKE configurations of the Alibaba Cloud VPN Gateway.
+
+    ![](images/3551_en-US.png)
+
 4.   Click**Network** \> **VPN** \> **IPsec** \> **Policy**. 
-5.   Select the new IPsec policy, click **Advanced Configuration**, configure IPsec protocol 
+5.   Select the new IPsec policy, click **Advanced Configuration** to configure the IPsec protocol. 
 
-    according to the IPsec information of the IPsec connection configured for the Alibaba Cloud VPN Gateway.
+    Configure the IPsec protocol according to the IPsec configurations of the Alibaba Cloud VPN Gateway.
+
+    ![](images/3554_en-US.png)
 
     Create the downlink security policy and the uplink security policy.
 
-    -   The security policy configuration from the Alibaba cloud VPC to the local IDC is shown in the following figure.
+    -   The security policy configuration from the Alibaba Cloud VPC to the local IDC is shown in the following figure.
 
 6.   Click**Policy** \> **Security Policy** \> **Create**. 
 
-    The security policy configuration from the Alibaba Cloud VPC to the local IDC is shown in the following figure.
+    The security policy configuration from the Alibaba Cloud VPC to the local IDC is shown in the following figure.![](images/3558_en-US.png)
 
     The security policy configuration from the local IDC to the Alibaba Cloud VPC is shown in the following figure.
 
+    ![](images/3559_en-US.png)
+
 7.   Click**Network** \> **Route** \> **Static Route**. 
-8.   Add the default route, set the uplink interface as the next hop of the outbound traffic. 
+8.   Add the default route, set the uplink interface as the next hop of the outbound traffic. In this tutorial, no configuration is required. 
+
+    ![](images/3562_en-US.png)
+
 
