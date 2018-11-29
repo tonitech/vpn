@@ -2,18 +2,18 @@
 
 This document illustrates how to use SSL-VPN to connect a VPC from a remote computer of the Linux operating system.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15397750293324_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434965643324_en-US.png)
 
 ## Prerequisites {#section_wwc_lvz_wdb .section}
 
-Before deploying the VPN gateway, make sure that the following conditions are met:
+Before deploying the VPN Gateway, make sure that the following conditions are met:
 
 -   The IP address ranges of the VPC and the remote computer are not in conflict.
 
 -   The client can access the Internet.
 
 
-## Step 1: Create a VPN gateway {#section_gw4_1wz_wdb .section}
+## Step 1: Create a VPN Gateway {#section_gw4_1wz_wdb .section}
 
 1.  Log on to the VPC console.
 2.  In the left-side navigation pane, click **VPN** \> **VPN Gateways**.
@@ -29,13 +29,13 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
     -   **IPsec-VPN**: Select whether to enable the IPsec-VPN feature. The IPSec-VPN feature applies to site-to-site connections and can be enabled according to your actual needs.
 
-    -   **SSL-VPN**:  Select whether to enable the SSL-VPN feature. The SSL-VPN feature allows you to connect to a VPC from a single computer anywhere. In this tutorial, select **Enable**.
+    -   **SSL-VPN**: Select whether to enable the SSL-VPN feature. The SSL-VPN feature allows you to connect to a VPC from a single computer anywhere. In this tutorial, select **Enable**.
 
     -   **Concurrent SSL Connections**: Select the maximum number of clients you want to connect to simultaneously.
 
 **Note:** You can only configure this option after you enables the SSL-VPN feature.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15397750293325_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434965643325_en-US.png)
 
 5.  Go back to the VPN Gateways page, select China \(Hangzhou\) region to view the created VPN Gateway.
 
@@ -43,7 +43,7 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
     **Note:** It usually takes 1-5 minutes to create a VPN Gateway.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15397750293326_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434965643326_en-US.png)
 
 
 ## Step 2: Create an SSL server {#section_txk_4wz_wdb .section}
@@ -56,11 +56,11 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
     -   **Local Network**: Enter the CIDR block of the network to be connected. Click **Add Local Network** to add multiple local networks. The local network can be the CIDR block of any VPC or VSwitch, or the CIDR block of the local network.
 
-    -   Client Subnet: Enter the IP addresses used by the client to connect to the server in the form of CIDR block.
+    -   Client Subnet: Enter the IP addresses used by the client to connect the server in the form of CIDR block.
 
     -   Advanced Configuration: Use the default advanced configuration.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15397750293327_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434965643327_en-US.png)
 
 
 ## Step 3: Create a client certificate {#section_ddh_5wz_wdb .section}
@@ -71,10 +71,10 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
 4.  On the SSL Clients page, find the created SSL client certificate, and then click **Download**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15397750293328_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434965643328_en-US.png)
 
 
-## Step 4: Configure Mac clients {#section_zny_zwz_wdb .section}
+## Step 4: Configure Linux clients {#section_zny_zwz_wdb .section}
 
 1.  Run the following command to install the OpenVPN client.
 
@@ -94,7 +94,7 @@ Before deploying the VPN gateway, make sure that the following conditions are me
 
 On the client, ping the private IP address of an ECS instance in the connected VPC network to verify the connection.
 
-**Note:** Make sure that the security rule of the ECS instance allow remote access. For more information, see [Add security group rules](https://help.aliyun.com/document_detail/58746.html).
+**Note:** Make sure that the security rule of the ECS instance allow remote access. For more information, see [Typical applications of security group rules](../../../../reseller.en-US/User Guide/Security groups/Typical applications of security group rules.md#).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15397750293329_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13354/15434965643329_en-US.png)
 
