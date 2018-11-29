@@ -11,13 +11,13 @@ This document takes strongSwan as an example to show how to configure the VPN se
 -   The public IP of strongSwan is 59.110.165.70.
 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13369/15382959033583_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13369/15434982953583_en-US.png)
 
 ## Prerequisites {#section_tpp_k5f_xdb .section}
 
--   Make sure you have configured IPsec connections. For more information, see [Configure a site-to-site connection.](https://help.aliyun.com/document_detail/65072.html).
+-   Make sure you have configured IPsec connections. For more information, see [Configure a site-to-site connection](../../../../reseller.en-US/IPsec-VPN Quick Start/Configure a site-to-site connection.md#).
 
--   After you create an IPsec connection, download the configurations of the created IPsec connection. For more information, see [Manage IPsec connections](https://help.aliyun.com/document_detail/65288.html).
+-   After you create an IPsec connection, download the configurations of the created IPsec connection. For more information, see [Manage an IPsec connection](../../../../reseller.en-US/User Guide/Manage an IPsec connection.md#).
 
 
 ## Install strongSwan {#section_qzg_m5f_xdb .section}
@@ -88,7 +88,7 @@ This document takes strongSwan as an example to show how to configure the VPN se
     # echo 1 > /proc/sys/net/ipv4/ip_forward
     ```
 
-    For more configuration examples for different scenarios, see [Configuration Examples for Different Scenarios](https://strongswan.org/documentation.html).
+    For more configuration examples for different scenarios, see [Configuration examples for different scenarios](https://strongswan.org/documentation.html).
 
 5.  Run the following command to start the strongSwan service.
 
