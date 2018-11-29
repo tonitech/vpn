@@ -2,12 +2,9 @@
 
 The tutorials illustrate how to use SSL-VPN to connect a VPC from a remote computer using the Linux, Windows, and Mac operating systems.
 
-## Prerequisite {#section_hft_2vz_wdb .section}
+## Prerequisites {#section_hft_2vz_wdb .section}
 
--   [Submit a ticket](https://workorder.console.aliyun.com/console.htm#/ticket/add?productCode=vpn&commonQuestionId=973&isSmart=true) to use the SSL-VPN function.
-
--   Switch to the new VPC console. For more information, see [New VPC console announcement](https://help.aliyun.com/document_detail/66191.html).
-
+Switch to the new VPC console.
 
 ## Procedure {#section_hpk_dvz_wdb .section}
 
