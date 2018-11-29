@@ -8,7 +8,7 @@ Before creating a site-to-site VPN connection, make sure the following condition
 
 -   The gateway device of the local data center support IKEv1 and ikev2 protocols.
 
-    IPsec-VPN supports IKEv1 and IKEv2 protocols. Any device that supports these two protocols can connect to Alibaba Cloud VPN Gateway. Supported devices include: Huawei, H3C, Cisco, ASN, Juniper, SonicWall, Nokia, IBM, and Ixia.
+    IPsec-VPN supports IKEv1 and IKEv2 protocols. Any device that supports these two protocols can connect to Alibaba Cloud VPN Gateway. Supported devices include: Huawei, H3C, SANGFOR, Cisco ASA, Juniper, SonicWall, Nokia, IBM, and Ixia.
 
 -   A static IP address is configured for the local gateway.
 
@@ -19,21 +19,21 @@ Before creating a site-to-site VPN connection, make sure the following condition
 
 To use IPsec-VPN to connect different sites, you must:
 
-1.  Create a VPN gateway with IPsec-VPN enabled.
+1.  Create a VPN Gateway with IPsec-VPN enabled.
 
-    Up to 10 IPsec connections can be established within a VPN gateway.
+    Up to 10 IPsec connections can be established within a VPN Gateway.
 
 2.  Create a customer gateway.
 
-    By creating a customer gateway, you can upload the configuration of the local gateway to the Alibaba Cloud. A customer gateway can be connected to multiple VPN gateways.
+    By creating a customer gateway, you can upload the configuration of the local gateway to the Alibaba Cloud. A customer gateway can be connected to multiple VPN Gateways.
 
 3.  Create an IPsec connection.
 
-    Create an IPsec connection to connect the VPN gateway and customer gateway to establish an encrypted communication tunnel.
+    Create an IPsec connection to connect the VPN Gateway and customer gateway to establish an encrypted communication tunnel.
 
 4.  Configure the local gateway.
 
-    Configure the local gateway according to the IPsec connection configurations.
+    Configure the local gateway according to the IPsec connection configurations. For more information, see [Configure H3C firewall](../../../../reseller.en-US/Best Practices/Local gateway configurations/Configure H3C firewall.md#) and [Configure strongSwan](../../../../reseller.en-US/Best Practices/Local gateway configurations/Configure strongSwan.md#).
 
 5.  Configure the route and security groups.
 
