@@ -53,7 +53,7 @@ After the negotiation succeeds, the information transmission security is the sam
 
 ## Download the configuration {#section_ayd_fyc_xdb .section}
 
-After the IPsec connection is configured and the negotiation succeeds, you can download the IPsec connection configuration and configure the local gateway. For more information, see [Configure H3C firewall](../reseller.en-US/Best Practices/Local gateway configurations/Configure H3C firewall.md#)[Configure strongSwan](../reseller.en-US/Best Practices/Local gateway configurations/Configure strongSwan.md#).
+After the IPsec connection is configured and the negotiation succeeds, you can download the IPsec connection configuration and configure the local gateway. For more information, see [Configure H3C firewall](../intl.en-US/Best Practices/Local gateway configurations/Configure H3C firewall.md#)[Configure strongSwan](../intl.en-US/Best Practices/Local gateway configurations/Configure strongSwan.md#).
 
 Follow these steps to download the IPsec connection configuration:
 
@@ -66,7 +66,7 @@ Follow these steps to download the IPsec connection configuration:
 
     For example, if you set the local network to 192.168.0.0/16 and the remote network to 10.0.0.0/8 in an IPsec connection, the downloaded IPsec connection configuration is as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15434982253317_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15435495423317_en-US.png)
 
 
 ## Edit an IPsec connection {#section_eyd_fyc_xdb .section}
@@ -99,7 +99,4 @@ Follow these steps to view IPsec connection logs:
 3.  On the IPsec Connections page, select the region of the target IPsec connection.
 4.  Click **View Logs** in the **Actions** column of the target IPsec connection.
 5.  On the displayed page, configure the time range of the logs to view.
-
-    ![](images/3342_en-US.png)
-
 
