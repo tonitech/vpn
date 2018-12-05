@@ -6,11 +6,11 @@ Multinational corporations can use Express Connect to connect two VPCs from diff
 
 Multinational corporations often have the need to deploy applications in multiple countries and interconnect Operation and Maintenance systems around the world. For example, an enterprise deploys two sets of applications in the eastern United States and Shanghai, and needs to connect offices worldwide as shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13371/15397767383594_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13371/15439959513594_en-US.png)
 
 ## Solution overview {#section_a3r_yxf_xdb .section}
 
-Typical worldwide communication and data transfer solutions, and risks include the following:
+Typical worldwide communication and data transfer solutions and risks include the following:
 
 |Typical solutions|Risks|
 |:----------------|:----|
@@ -22,7 +22,7 @@ Alibaba Cloud provides secure, high-quality, and relatively low-cost solution fo
 
 You can use Express Connect to connect two VPCs and use VPN Gateway to connect the office sites to VPCs as shown in the following figure:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13371/15397767383595_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13371/15439959513595_en-US.png)
 
 ## Prerequisites { .section}
 
@@ -67,7 +67,7 @@ The router interface configuration in this tutorial is shown in the following fi
 ## Step 4: Configure the route { .section}
 
 1.  Log on to the VPC console.
-2.  In the left-side navigation bar, click **Route Tables**. Find the route table of the target VPC and click **Manage**.
+2.  In the left-side navigation pane, click **Route Tables**. Find the route table of the target VPC and click **Manage**.
 3.  On the Route Tables page, click **Add Route Entry** to add the following routes.
 
     Add the following route entries for VPC 1 \(172.16.0.0/16\):
