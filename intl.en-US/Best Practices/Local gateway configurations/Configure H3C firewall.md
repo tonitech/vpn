@@ -25,7 +25,7 @@ When using IPsec-VPN to create a site-to-site connection, you must configure the
 |IKE Version|ikev1|
 |SA Life Cycle \(seconds\)|86400|
 
-    -   Network Configuration
+    -   Network configuration
 
 |Configuration|Value|
 |:------------|:----|
@@ -37,22 +37,24 @@ When using IPsec-VPN to create a site-to-site connection, you must configure the
 |Downlink private port|G 2/0/10|
 
 
-1.   Log on to the console of the H3C firewall, and then click**Network** \> **VPN** \> **IPsec** \> **Policy** . 
+1.  Log on to the console of the H3C firewall, and then click**Network** \> **VPN** \> **IPsec** \> **Policy** . 
 2.   Configure the H3C firewall IPsec policy based on the IPsec configurations of the Alibaba Cloud VPN Gateway. Click **Add** in the **Protected Data Stream** list, set the IP address range of the IDC to the source IP and the IP address range of the VPC to the destination IP. 
-3.   Click**IKE Proposal** \> **Create**. Configure IKE proposal according to the IKE configurations of the Alibaba Cloud VPN Gateway.
-4.   Click**Network** \> **VPN** \> **IPsec** \> **Policy**. 
+3.  Click**IKE Proposal** \> **Create**. Configure IKE proposal according to the IKE configurations of the Alibaba Cloud VPN Gateway.
+4.  Click**Network** \> **VPN** \> **IPsec** \> **Policy**. 
 5.   Select the new IPsec policy, click **Advanced Configuration** to configure the IPsec protocol. 
 
-    Configure the IPsec protocol according to the IPsec configurations of the Alibaba Cloud VPN Gateway.
+    Configure the IPsec protocol according to the IPsec information of the IPsec connection configured for the Alibaba Cloud VPN Gateway.
 
     Create the downlink security policy and the uplink security policy.
 
-6.   Click**Policy** \> **Security Policy** \> **Create**. 
+    The security policy configuration from the Alibaba cloud VPC to the local IDC is shown in the following figure.
+
+6.  Click**Policy** \> **Security Policy** \> **Create**. 
 
     The security policy configuration from the Alibaba Cloud VPC to the local IDC is shown in the following figure.
 
     The security policy configuration from the local IDC to the Alibaba Cloud VPC is shown in the following figure.
 
-7.   Click**Network** \> **Route** \> **Static Route**. 
+7.  Click**Network** \> **Route** \> **Static Route**. 
 8.   Add the default route, set the uplink interface as the next hop of the outbound traffic. In this tutorial, no configuration is required. 
 
