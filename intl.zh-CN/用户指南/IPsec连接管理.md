@@ -1,12 +1,12 @@
 # IPsec连接管理 {#concept_hpr_byc_xdb .concept}
 
-创建IPsec VPN网关和用户网关后，可以创建IPsec连接建立加密通信通道。
+创建IPsec VPN网关和用户网关后，您可以创建IPsec连接建立加密通信通道。
 
 ## 创建IPsec连接 {#section_mxd_fyc_xdb .section}
 
 完成以下操作，创建IPsec连接：
 
-1.  登录VPC管理控制台。
+1.  登录专有网络管理控制台。
 2.  在左侧导航栏，单击**VPN** \> **IPSec连接**。
 3.  在IPsec连接页面，选择IPsec连接的地域。
 4.  单击**创建IPsec连接**。
@@ -57,35 +57,35 @@
 
 完成以下操作，下载IPsec连接配置：
 
-1.  登录VPC管理控制台。
+1.  登录专有网络管理控制台。
 2.  在左侧导航栏，单击**VPN** \> **IPSec连接**。
 3.  在IPsec连接页面，选择IPsec连接的地域。
-4.  单击目标IPsec连接**操作**列下的**下载配置**。
+4.  找到目标IPsec连接，单击**操作**列下的**下载对端配置**。
 
     下载配置中的RemotSubnet和LocalSubnet与创建IPsec连接时的本端网段和对端网段正好是相反的。因为从阿里云VPN网关的角度看，对端是本地IDC的网段，本端是阿里云侧的VPC网段；而从本地IDC的网关设备角度看，LocalSubnet就是指本地IDC的网段，RemotSubnet则是指阿里云VPC的网段。
 
     比如您在配置IPsec连接时，输入的本端网段为192.168.0.0/16，对端网段为172.16.0.0/12，下载的IPsec连接配置如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15434982203317_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15523569533317_zh-CN.png)
 
 
 ## 编辑IPsec连接配置 {#section_eyd_fyc_xdb .section}
 
 完成以下操作，编辑IPsec连接配置：
 
-1.  登录VPC管理控制台。
+1.  登录专有网络管理控制台。
 2.  在左侧导航栏，单击**VPN** \> **IPSec连接**。
 3.  在IPsec连接页面，选择IPsec连接的地域。
-4.  单击目标IPsec连接**操作**列下的**编辑**。
+4.  找到目标IPsec连接，单击**操作**列下的**编辑**。
 
 ## 删除IPsec连接 {#section_gyd_fyc_xdb .section}
 
 完成以下操作，删除IPsec连接：
 
-1.  登录VPC管理控制台。
+1.  登录专有网络管理控制台。
 2.  在左侧导航栏，单击**VPN** \> **IPSec连接**。
 3.  在IPsec连接页面，选择IPsec连接的地域。
-4.  单击目标IPsec连接**操作**列下的**删除**。
+4.  找到目标IPsec连接，单击**操作**列下的**删除**。
 5.  在弹出的对话框，单击**确认**。
 
 ## 查看IPsec连接日志 {#section_jyd_fyc_xdb .section}
@@ -94,12 +94,12 @@
 
 完成以下操作，查看IPsec连接日志：
 
-1.  登录VPC管理控制台。
+1.  登录专有网络管理控制台。
 2.  在左侧导航栏，单击**VPN** \> **IPSec连接**。
 3.  在IPsec连接页面，选择IPsec连接的地域。
-4.  单击目标IPsec连接**操作**列下的**查看日志**。
+4.  找到目标IPsec连接，单击**操作**列下的**查看日志**。
 5.  在弹出的页面，设置要查看的日志的时间，查看日志。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13359/15434982203342_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13359/15523569533342_zh-CN.png)
 
 
