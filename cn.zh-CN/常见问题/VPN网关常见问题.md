@@ -2,23 +2,23 @@
 
 ## 1. VPN网关是否支持经典网络？ {#section_sdq_n3h_xdb .section}
 
-不支持。VPN网关仅支持专有网络，如果您想在经典网络中使用VPN网关，需要在专有网络中开启ClassicLink功能，详情参见[在经典网络中使用IPsec-VPN](../../../../intl.zh-CN/最佳实践/在经典网络中使用IPsec-VPN.md#)。
+不支持。VPN网关仅支持专有网络，如果您想在经典网络中使用VPN网关，需要在专有网络中开启ClassicLink功能，详情参见[在经典网络中使用IPsec-VPN](../../../../../cn.zh-CN/最佳实践/在经典网络中使用IPsec-VPN.md#)。
 
 ## 2. 本地站点通过IPsec-VPN接入VPC的前提条件是什么？ {#section_tdq_n3h_xdb .section}
 
-需要一个静态公网IP和一个支持IKEv1和IKEv2协议的网关设备，并且VPC和本地站点之间需要互通的两个网段不冲突。详情参见[配置站点到站点连接](../../../../intl.zh-CN/IPsec-VPN入门/配置站点到站点连接.md#)。
+需要一个静态公网IP和一个支持IKEv1和IKEv2协议的网关设备，并且VPC和本地站点之间需要互通的两个网段不冲突。详情参见[配置站点到站点连接](../../../../../cn.zh-CN/IPsec-VPN入门/配置站点到站点连接.md#)。
 
 ## 3. 跨地域VPC是否可以通过VPN网关互通？ {#section_udq_n3h_xdb .section}
 
-可以，详情参见[配置VPC到VPC连接](../../../../intl.zh-CN/IPsec-VPN入门/配置VPC到VPC连接.md#)。
+可以，详情参见[配置VPC到VPC连接](../../../../../cn.zh-CN/IPsec-VPN入门/配置VPC到VPC连接.md#)。
 
 ## 4. 支持的本地网关设备型号？ {#section_vdq_n3h_xdb .section}
 
-阿里云VPN网关支持标准的IKEv1和IKEv2协议。因此，只要支持这两种协议的设备都可以和云上VPN网关互连，比如华为、华三、山石、深信服、Cisco ASA、Juniper、SonicWall、Nokia、IBM 和 Ixia等。详情参见[华三防火墙配置](../../../../intl.zh-CN/最佳实践/本地网关配置/华三防火墙配置.md#)。
+阿里云VPN网关支持标准的IKEv1和IKEv2协议。因此，只要支持这两种协议的设备都可以和云上VPN网关互连，比如华为、华三、山石、深信服、Cisco ASA、Juniper、SonicWall、Nokia、IBM 和 Ixia等。详情参见[华三防火墙配置](../../../../../cn.zh-CN/最佳实践/本地网关配置/华三防火墙配置.md#)。
 
 ## 5. 是否支持SSL-VPN？ {#section_wdq_n3h_xdb .section}
 
-支持，详情参见[教程概述](../../../../intl.zh-CN/SSL-VPN入门/教程概述.md#)。
+支持，详情参见[教程概述](../../../../../cn.zh-CN/SSL-VPN入门/教程概述.md#)。
 
 ## 6. 每个VPN网关可以建立多少个IPsec连接？ {#section_xdq_n3h_xdb .section}
 
