@@ -2,7 +2,7 @@
 
 This topic describes how to create an IPsec-VPN connection. After creating a VPN Gateway and a customer gateway, you can create an IPsec-VPN connection to establish an encrypted tunnel for communication.
 
-1.  Log on to the [VPC console](https://partners-intl.aliyun.com/login-required#/vpc). 
+1.  Log on to the [VPC console](https://vpcnext.console.aliyun.com/nat/). 
 2.  In the left-side navigation pane, choose **VPN** \> **IPsec Connections**. 
 3.  On the IPsec Connections page, select the region of the IPsec-VPN connection. 
 4.  Click **Create IPsec connection**. 
@@ -27,7 +27,7 @@ This topic describes how to create an IPsec-VPN connection. After creating a VPN
     -   No: Start the negotiation only when there is incoming traffic.
 |
     |**Synchronize to VPN Route Table**|Choose whether to synchronize IPsec-VPN traffic routes to the VPN route table. We recommend that you select yes.    -   Yes: The IPsec-VPN traffic routes are synchronized to the VPN route table after the IPsec-VPN connection is created.
-    -   No: The IPsec-VPN traffic routes are not synchronized to the VPN route table after the IPsec-VPN connection is created. You need to add gateway routes on the VPN Gateway page. For more information, see [添加网关路由](reseller.en-US/User Guide/Manage a VPN Gateway/Configure routes of a VPN Gateway/Add policy-based routes.md#).
+    -   No: The IPsec-VPN traffic routes are not synchronized to the VPN route table after the IPsec-VPN connection is created. You need to add gateway routes on the VPN Gateway page. For more information, see [添加网关路由](intl.en-US/User Guide/Manage a VPN Gateway/Configure routes of a VPN Gateway/Add policy-based routes.md#).
 |
     |**Advanced Configuration: IKE Configurations**|
     |**Pre-Shared Key**|Enter the pre-shared key used for the authentication between the VPN Gateway and the customer gateway. By default, it is an automatically generated value. But you can enter a specific pre-shared key.|
