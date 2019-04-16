@@ -4,10 +4,10 @@
 
 您已经创建了SSL服务端。详细信息，请参见[创建SSL服务端](intl.zh-CN/用户指南/配置SSL-VPN/管理SSL服务端/创建SSL服务端.md#)。
 
-1.  登录[专有网络管理控制台](https://vpcnext.console.aliyun.com/nat/)。 
-2.  在左侧导航栏，单击**VPN** \> **SSL客户端** 。 
-3.  在SSL客户端页面，选择一个地域。 
-4.  单击**创建SSL客户端证书**。 
+1.  登录[专有网络管理控制台](https://vpcnext.console.aliyun.com/nat/)。
+2.  在左侧导航栏，单击**VPN** \> **SSL客户端** 。
+3.  在SSL客户端页面，选择一个地域。
+4.  单击**创建SSL客户端证书**。
 5.  根据以下信息配置客户端证书。 
 
     |配置|说明|
