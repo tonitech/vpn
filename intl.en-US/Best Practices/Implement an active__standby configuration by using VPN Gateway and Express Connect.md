@@ -7,13 +7,13 @@ You can connect your on-premises data center to an Alibaba Cloud VPC through bot
 -   When the physical connection works normally, the traffic between the on-premises data center and the VPC is forwarded through the physical connection.
 -   When the physical connection is abnormal, the traffic between the on-premises data center and the VPC is directed to the IPsec-VPN tunnel.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136915/155468806641822_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136915/155539097741822_en-US.png)
 
 ## Prerequisites {#section_n4r_fqp_fhb .section}
 
 A physical connection is created to allow intercommunication between your on-premises data center and the VPC.
 
-For more information, see [物理专线接入](../../../../../reseller.en-US/Getting Started (New Console)/Connect an on-premises IDC to a VPC through a physical connection.md#).
+For more information, see [Connect an on-premises IDC to a VPC through a physical connection](../../../../reseller.en-US/Getting Started (New Console)/Connect an on-premises IDC to a VPC through a physical connection.md#).
 
 ## Step 1: Create a VPN Gateway {#section_vfk_2mz_wdb .section}
 
@@ -43,7 +43,7 @@ To create a VPN Gateway, follow these steps:
 
     -   **Billing Cycle**: The billing cycle is set to **By Hour** by default.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468806742221_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539097742221_en-US.png)
 
 
 Go back to the VPN Gateways page, and select the **China \(Hangzhou\)** region to view the created VPN Gateway.
@@ -95,19 +95,19 @@ Create an IPsec-VPN connection to connect the VPN Gateway with the customer gate
     -   **Synchronize to VPN Route Table**: Choose whether to synchronize IPsec-VPN traffic routes to the VPN route table. We recommend that you select **Yes**.
 
 -   **Yes**: The IPsec-VPN traffic routes are synchronized to the VPN route table after the IPsec-VPN connection is created.
--   **No**: The IPsec-VPN traffic routes are not synchronized to the VPN route table after the IPsec-VPN connection is created. You need to add gateway routes on the VPN Gateway page. For more information, see [网关路由概述](../../../../../reseller.en-US/User Guide/Manage a VPN Gateway/Configure routes of a VPN Gateway/VPN Gateway route overview.md#).
+-   **No**: The IPsec-VPN traffic routes are not synchronized to the VPN route table after the IPsec-VPN connection is created. You need to add gateway routes on the VPN Gateway page. For more information, see [VPN Gateway route overview](../../../../reseller.en-US/User Guide/Manage a VPN Gateway/Configure routes of a VPN Gateway/VPN Gateway route overview.md#).
     -   **Pre-Shared Key**: Enter the pre-shared key. This value must be the same as that configured in the local gateway.
 
     -   **Health Check**: Enable the health check feature and enter the destination IP address, source IP address, retry interval, and retry times.
 
         Use the default configurations for other parameters.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468806742235_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539097742235_en-US.png)
 
 5.  In the displayed dialog box, click **OK**.
 6.  Find the target route entry, click **Publish** in the **Actions** column, and then in the displayed dialog box, click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468806742236_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539097742236_en-US.png)
 
 
 ## Step 4: Configure the local gateway {#section_ptn_44z_wdb .section}
@@ -118,20 +118,20 @@ To configure the local gateway, follow these steps:
 2.  Select the **China \(Hangzhou\)** region.
 3.  Find the target IPsec-VPN connection and click **Download Configuration**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468806742237_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539097742237_en-US.png)
 
-4.  Configure the local gateway based on the downloaded configurations of the IPsec-VPN connection. For more information, see [本地网关配置](../../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
+4.  Configure the local gateway based on the downloaded configurations of the IPsec-VPN connection. For more information, see [Configure local gateways](../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
 
     The items RemoteSubnet and LocalSubnet in the downloaded configurations operate converse to the setup of the local network and the remote network you configured when you create the IPsec-VPN connection. Specifically, from the perspective of VPN Gateway, the remote network is the on-premises data center and the local network is the VPC. However, from the perspective of the local gateway, LocalSubnet is the CIDR block of the on-premises data center and RemoteSubnet is the CIDR block of the VPC.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468806742238_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539097742238_en-US.png)
 
 
 ## Step 5: Configure health checks for the VBR of the physical connection {#section_bkr_hnp_fhb .section}
 
 Configure health checks for the Virtual Border Router \(VBR\) of the physical connection to make sure that the status of the physical connection can be checked by the VPC and traffic can be directed to the IPsec-VPN connection when the physical connection fails.
 
-For more information, see [配置健康检查](../../../../../reseller.en-US/User Guide (New Console)/Configure health checks.md#).
+For more information, see [Configure health checks](../../../../reseller.en-US/User Guide (New Console)/Configure health checks.md#).
 
 ## Step 6: Configure the physical connection device {#section_j23_4pp_fhb .section}
 
