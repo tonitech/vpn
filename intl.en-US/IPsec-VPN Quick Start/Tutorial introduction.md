@@ -15,7 +15,7 @@ Before creating a site-to-site VPN connection, make sure the following condition
 
 The following figure shows the procedure of establishing a site-to-site VPN connection through IPsec-VPN.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13350/155538267242184_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13350/155538438142184_en-US.png)
 
 1.  Create a VPN Gateway.
 
@@ -31,10 +31,12 @@ The following figure shows the procedure of establishing a site-to-site VPN conn
 
 4.  Configure the local gateway.
 
-    Configure the local gateway according to the IPsec-VPN connection configurations. For more information, see [本地CPE配置](../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
+    Configure the local gateway according to the IPsec-VPN connection configurations. For more information, see [Configure local CPEs](../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
 
 5.  Test the connectivity.
 
     Log on to an ECS instance that does not have a public IP address in the target Alibaba Cloud VPC. Then, ping the private IP address of a host in your on-premises data center to test if the VPC and the on-premises data center can communicate with each other.
 
+
+For more information, see [Create a site-to-site connection through IPsec-VPN](reseller.en-US/IPsec-VPN Quick Start/Create a site-to-site connection through IPsec-VPN.md#).
 
