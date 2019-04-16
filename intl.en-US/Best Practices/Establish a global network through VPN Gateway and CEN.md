@@ -6,7 +6,7 @@ This topic describes how to establish a global network by using VPN Gateway and 
 
 An international company wants to deploy different applications in multiple countries, but the applications need to be accessible by multiple offices in each country. In this example, the company has one VPC in the US \(Virginia\) region, and one in the China \(Shanghai\) region, and each VPC has a separate application deployed. The company also has two offices in Virginia and two in Shanghai.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/155468804441627_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/155539102541627_en-US.png)
 
 ## Solution {#section_a3r_yxf_xdb .section}
 
@@ -22,7 +22,7 @@ To resolve the preceding problems of traditional connection solutions, Alibaba C
 
 In the Alibaba Cloud solution, an application is deployed to each VPC located in US \(Virginia\) and China \(Shanghai\) respectively \(in this example, the VPCs for Virginia and Shanghai are VPC1 and VPC2 respectively\). Then, VPC1 and VPC2 are connected by using CEN. After that, Office 1 and Office 2 in Virginia are connected to the VPN Gateway of VPC1, and Office 3 and Office 4 in Shanghai are connected to the VPN Gateway of VPC2 through IPsec-VPN connections. In this way, the applications and offices connected to the VPCs in the US \(Virginia\) region and the China \(Shanghai\) region can communicate with each other.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/155468804441628_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/155539102541628_en-US.png)
 
 ## Prerequisites {#section_il5_z3p_fhb .section}
 
@@ -35,12 +35,12 @@ In the Alibaba Cloud solution, an application is deployed to each VPC located in
 
 ## Step 1: Create IPsec-VPN connections for the offices in Virginia {#section_e5z_gyf_xdb .section}
 
-1.  Create a VPN Gateway for the VPC in the US \(Virginia\) region. For more information, see [../../../../../dita-oss-bucket/SP\_74/DNVPN11881475/EN-US\_TP\_13357.md\#section\_zv3\_nyf\_xdb](../../../../../reseller.en-US/User Guide/Manage a VPN Gateway/Create a VPN Gateway.md#section_zv3_nyf_xdb).
+1.  Create a VPN Gateway for the VPC in the US \(Virginia\) region. For more information, see [Create a VPN Gateway](../../../../reseller.en-US/User Guide/Manage a VPN Gateway/Create a VPN Gateway.md#).
 2.  Create two customer gateways and register the public IP addresses of the two local gateways in the two Virginia offices to the customer gateways.
 
-    The IP addresses of customer gateways are the public IP addresses of local gateways in the offices. For more information, see [../../../../../dita-oss-bucket/SP\_74/DNVPN11881475/EN-US\_TP\_13358.md\#section\_mwf\_lxc\_xdb](../../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage a customer gateway/Create a customer gateway.md#section_mwf_lxc_xdb).
+    The IP addresses of customer gateways are the public IP addresses of local gateways in the offices. For more information, see [Create a customer gateway](../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage a customer gateway/Create a customer gateway.md#).
 
-3.  Create two IPsec-VPN connections to connect the VPN Gateway with the two customer gateways. For more information, see [../../../../../dita-oss-bucket/SP\_74/DNVPN11881475/EN-US\_TP\_13359.md\#section\_mxd\_fyc\_xdb](../../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#section_mxd_fyc_xdb).
+3.  Create two IPsec-VPN connections to connect the VPN Gateway with the two customer gateways. For more information, see [Create an IPsec-VPN connection](../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
     -   **Local Network**: Enter 0.0.0.0/0.
 
 **Note:** We recommend that you set the CIDR block at the Alibaba Cloud side to 0.0.0.0/0 to simplify your network topology. In that way, you only need to establish an IPsec-VPN connection to connect each office with Alibaba Cloud and do not need to modify the configurations of the connection if you add new offices to the network.
@@ -49,7 +49,7 @@ In the Alibaba Cloud solution, an application is deployed to each VPC located in
 
 4.  Configure local gateways in the Virginia offices.
 
-    Configure local gateways based on the configurations of the created IPsec-VPN connections. For more information, see [本地网关配置](../../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
+    Configure local gateways based on the configurations of the created IPsec-VPN connections. For more information, see [Configure local gateways](../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
 
 
 ## Step 2: Create IPsec-VPN connections for the offices in Shanghai {#section_btz_tyf_xdb .section}
@@ -58,13 +58,13 @@ Create IPsec-VPN connections for the offices in Shanghai. To do so, refer to the
 
 ## Step 3: Connect VPCs {#section_sr3_5yf_xdb .section}
 
-Connect the VPCs by using CEN. For more information, see [云企业网教程概览](../../../../../reseller.en-US/Quick Start/Tutorial overview.md#).
+Connect the VPCs by using CEN. For more information, see [Tutorial overview](../../../../reseller.en-US/Quick Start/Tutorial overview.md#).
 
 ## Step 4: Add routes in CEN {#section_qvl_djp_fhb .section}
 
 Publish the routes in the VPCs that are directed to the VPN Gateways to CEN so that other networks in CEN can learn the routes.
 
-For more information, see [发布路由到CEN](../../../../../reseller.en-US/User Guide/Manage routes/Manage network routes.md#section_qts_1ct_q2b).
+For more information, see [Publish a route entry to CEN](../../../../reseller.en-US/User Guide/Manage routes/Manage network routes.md#section_qts_1ct_q2b).
 
 ## Step 5: Configure security groups {#section_ks3_w1g_xdb .section}
 

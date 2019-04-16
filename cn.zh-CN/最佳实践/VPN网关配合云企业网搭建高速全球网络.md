@@ -6,7 +6,7 @@
 
 大型跨国公司经常有在多个国家部署应用系统并与世界各地的办公运维系统互连的需求，例如某企业需要在美国东部和上海分别部署两套应用系统，同时与位于各地的办公地点互连，如下图所示。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/155468803641627_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/155539101841627_zh-CN.png)
 
 ## 方案概述 {#section_a3r_yxf_xdb .section}
 
@@ -22,7 +22,7 @@
 
 如下图所示，若要实现美国东部和上海各办公点间的互连需求，您可以分别在美国东部和上海的VPC内部署应用系统，VPC间通过云企业网连接，两个地域的办公地点通过IPsec-VPN分别接入到两个VPC的VPN网关，实现全球办公网络互联。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/155468803641628_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/155539101941628_zh-CN.png)
 
 ## 前提条件 {#section_il5_z3p_fhb .section}
 
@@ -35,12 +35,12 @@
 
 ## 步骤一 创建美国东部办公点的IPsec连接 {#section_e5z_gyf_xdb .section}
 
-1.  为美国东部的VPC创建一个VPN网关。详细说明，请参见[创建VPN网关](../../../../../intl.zh-CN/用户指南/管理VPN网关/创建VPN网关.md#section_zv3_nyf_xdb)。
+1.  为美国东部的VPC创建一个VPN网关。详细说明，请参见[创建VPN网关](../../../../intl.zh-CN/用户指南/管理VPN网关/创建VPN网关.md#section_zv3_nyf_xdb)。
 2.  创建两个用户网关，将办公地点网关设备的公网IP地址注册到用户网关中用于建立IPsec连接。
 
-    用户网关的IP地址是办公地点网关设备的公网IP地址。详细说明，请参见[创建用户网关](../../../../../intl.zh-CN/用户指南/配置IPsec-VPN/管理用户网关/创建用户网关.md#section_mwf_lxc_xdb)。
+    用户网关的IP地址是办公地点网关设备的公网IP地址。详细说明，请参见[创建用户网关](../../../../intl.zh-CN/用户指南/配置IPsec-VPN/管理用户网关/创建用户网关.md#section_mwf_lxc_xdb)。
 
-3.  创建两个IPsec连接，将VPN网关和用户网关连接起来。详细说明，请参见[创建IPsec连接](../../../../../intl.zh-CN/用户指南/配置IPsec-VPN/管理IPsec连接/创建IPsec连接.md#section_mxd_fyc_xdb)。
+3.  创建两个IPsec连接，将VPN网关和用户网关连接起来。详细说明，请参见[创建IPsec连接](../../../../intl.zh-CN/用户指南/配置IPsec-VPN/管理IPsec连接/创建IPsec连接.md#section_mxd_fyc_xdb)。
     -   **本端网段**：输入0.0.0.0/0。
 
 **说明：** 建议您VPN连接阿里云侧网段设置为0.0.0.0/0，这样可以极大地简化网络拓扑，每个办公点只需要建立一条到云端的VPN连接，且后续增加新的办公点不需要修改已有的配置。
@@ -49,7 +49,7 @@
 
 4.  在本地办公地点网关设备中加载VPN配置。
 
-    根据本地办公地点网关设备的要求，加载VPN配置。详细说明，请参见[本地网关配置](../../../../../intl.zh-CN/用户指南/配置IPsec-VPN/本地网关配置/华为防火墙配置.md#)。
+    根据本地办公地点网关设备的要求，加载VPN配置。详细说明，请参见[本地网关配置](../../../../intl.zh-CN/用户指南/配置IPsec-VPN/本地网关配置/华为防火墙配置.md#)。
 
 
 ## 步骤二 创建上海办公点的IPsec连接 {#section_btz_tyf_xdb .section}
@@ -58,13 +58,13 @@
 
 ## 步骤三 连接VPC {#section_sr3_5yf_xdb .section}
 
-您可以通过云企业网功能，连接两个地域的VPC。详细说明，请参见[云企业网教程概览](../../../../../intl.zh-CN/快速入门/教程概览.md#)。
+您可以通过云企业网功能，连接两个地域的VPC。详细说明，请参见[教程概览](../../../../intl.zh-CN/快速入门/教程概览.md#)。
 
 ## 步骤四 在CEN中宣告路由 {#section_qvl_djp_fhb .section}
 
 您可以将VPC中指向VPN网关的路由发布到CEN中，CEN中其他加载的网络实例便可以学习到该条路由。
 
-详细信息，请参见[发布路由到CEN](../../../../../intl.zh-CN/用户指南/管理路由/管理网络实例路由.md#section_qts_1ct_q2b)。
+详细信息，请参见[发布路由到CEN](../../../../intl.zh-CN/用户指南/管理路由/管理网络实例路由.md#section_qts_1ct_q2b)。
 
 ## 步骤五 配置安全组 {#section_ks3_w1g_xdb .section}
 
