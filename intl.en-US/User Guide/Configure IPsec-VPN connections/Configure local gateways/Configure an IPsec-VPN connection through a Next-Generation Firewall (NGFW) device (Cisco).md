@@ -13,11 +13,11 @@ The following table lists the network configurations of the VPC and the on-premi
 
 ## Configure an IKEv1 VPN {#section_d12_sfd_xdb .section}
 
-**Prerequisites**
+**Prerequisites** 
 
--   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [创建IPsec连接](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
+-   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [Create an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
 
--   The configuration of the IPsec-VPN connection is downloaded. For more information, see [下载IPsec连接配置](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Download the configuration of an IPsec-VPN connection.md#). The configurations in the following table are used in this example.
+-   The configuration of the IPsec-VPN connection is downloaded. For more information, see [Download the configuration of an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Download the configuration of an IPsec-VPN connection.md#). The configurations in the following table are used in this example.
 
 |Protocol|Configuration|Example value|
 |:-------|:------------|:------------|
@@ -36,7 +36,7 @@ The following table lists the network configurations of the VPC and the on-premi
 |Negotiation Mode|esp|
 
 
-**Procedure**
+ **Procedure** 
 
 To load customer gateway configurations to the NGFW device from Cisco, follow these steps:
 
@@ -105,11 +105,11 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 
 ## Configure an IKEv2 VPN {#section_uxm_djd_xdb .section}
 
-**Prerequisites**
+**Prerequisites** 
 
--   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [创建IPsec连接](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
+-   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [Create an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
 
--   The configuration of the IPsec-VPN connection is downloaded. For more information, see [下载IPsec连接配置](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Download the configuration of an IPsec-VPN connection.md#). The configurations in the following table are used in this example.
+-   The configuration of the IPsec-VPN connection is downloaded. For more information, see [Download the configuration of an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Download the configuration of an IPsec-VPN connection.md#). The configurations in the following table are used in this example.
 
     |Protocol|Configuration|Example value|
     |:-------|:------------|:------------|
