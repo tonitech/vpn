@@ -4,9 +4,9 @@ This topic takes an SRX series Services Gateway firewall device from Juniper as 
 
 ## Prerequisites {#section_zc5_l4c_ghb .section}
 
--   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [创建IPsec连接](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
+-   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [Create an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
 
--   The configuration of the IPsec-VPN connection is downloaded. For more information, see [下载IPsec连接配置](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Download the configuration of an IPsec-VPN connection.md#).
+-   The configuration of the IPsec-VPN connection is downloaded. For more information, see [Download the configuration of an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Download the configuration of an IPsec-VPN connection.md#).
 
     The IPsec-VPN connection configurations in the following table are used in this example.
 
