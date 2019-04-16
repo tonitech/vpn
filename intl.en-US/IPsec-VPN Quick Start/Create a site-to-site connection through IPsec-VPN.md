@@ -2,7 +2,7 @@
 
 This topic describes how to create a site-to-site VPN connection through IPsec-VPN to connect an Alibaba Cloud VPC with an on-premises data center.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155529336142201_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155538150342201_en-US.png)
 
 ## Prerequisites {#section_q3w_ylz_wdb .section}
 
@@ -37,7 +37,7 @@ You must meet the following requirements before creating an IPsec-VPN connection
 
 **Note:** You can only configure this option after you enable the SSL-VPN feature.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155529336242203_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155538150342203_en-US.png)
 
     -   **Billing Cycle**: The billing cycle is set to **By Hour** by default.
 
@@ -59,7 +59,7 @@ The initial status of a VPN Gateway is **Preparing**, which indicates the initia
 
     -   **Description**: Enter a description of the customer gateway.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15552933623314_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15553815033314_en-US.png)
 
         You can also click **+** to add multiple customer gateways.
 
@@ -95,15 +95,15 @@ The initial status of a VPN Gateway is **Preparing**, which indicates the initia
 
         Use the default configurations for other parameters.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15552933623315_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15553815033315_en-US.png)
 
 5.  In the displayed dialog box, click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155529336242211_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155538150342211_en-US.png)
 
 6.  Find the target route entry, click **Publish** in the **Actions** column, and then in the displayed dialog box, click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155529336242213_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155538150342213_en-US.png)
 
 
 ## Step 4: Configure the local gateway {#section_ptn_44z_wdb .section}
@@ -112,13 +112,13 @@ The initial status of a VPN Gateway is **Preparing**, which indicates the initia
 2.  Select the **China \(Hangzhou\)** region.
 3.  Find the target IPsec-VPN connection and click **Download Configuration**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155529336242207_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/155538150342207_en-US.png)
 
-4.  Configure the local gateway accordingly. For more information, see [本地网关配置](../../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
+4.  Configure the local gateway accordingly. For more information, see [本地网关配置](../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
 
     The RemoteSubnet and LocalSubnet in the download configuration are the opposite of the local network and the remote network when creating an IPsec-VPN connection. From the perspective of VPN Gateway, the remote network is the on-premises data center and the local network is the VPC.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15552933623317_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15553815033317_en-US.png)
 
 
 ## Step 5: Test the connectivity {#section_ojw_ylz_wdb .section}
