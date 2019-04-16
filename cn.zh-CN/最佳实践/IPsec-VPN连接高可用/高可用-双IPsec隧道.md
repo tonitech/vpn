@@ -9,7 +9,7 @@
 -   当基于IP1的Internet链路正常时，本地数据中心与VPC之间的所有流量只通过主隧道转发。
 -   当基于IP1的Internet链路异常时，本地数据中心与VPC之间的所有流量切换到备用隧道。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468798741844_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539446741844_zh-CN.png)
 
 ## 前提条件 {#section_oth_2mg_xdb .section}
 
@@ -47,7 +47,7 @@
 
     -   **计费周期**：选择购买时长。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155468798741710_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155539446741710_zh-CN.png)
 
 5.  返回VPN网关页面，选择**华东1**地域，查看创建的VPN网关。
 
@@ -69,7 +69,7 @@
     -   **描述**：输入用户网关的描述信息。
 5.  在创建用户网关页面，单击**+添加**添加另一用户网关。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155468798741711_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155539446741711_zh-CN.png)
 
 
 ## 步骤三 创建IPsec连接 {#section_ty2_jnz_wdb .section}
@@ -96,18 +96,18 @@
         -   否：当有流量进入时进行协商。
     -   **同步到VPN路由表**：选择是否将兴趣流同步到VPN路由表，推荐选择是。
         -   是：IPsec连接创建完成后，兴趣流同步到VPN路由表。
-        -   否：IPsec连接创建完成后，兴趣流未同步到VPN路由表，您还需前往VPN网关页面添加网关路由。详细说明，请参见[网关路由概述](../../../../../intl.zh-CN/用户指南/管理VPN网关/配置VPN网关路由/网关路由概述.md#)。
+        -   否：IPsec连接创建完成后，兴趣流未同步到VPN路由表，您还需前往VPN网关页面添加网关路由。详细说明，请参见[网关路由概述](../../../../intl.zh-CN/用户指南/管理VPN网关/配置VPN网关路由/网关路由概述.md#)。
     -   **预共享密钥**：输入共享密钥，该值必须与用于本地网关设备的值匹配。
     -   **健康检查**：开启健康检查并输入目的IP、源IP、重试间隔和重试次数。
 
         其他选项使用默认配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155468798741712_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155539446741712_zh-CN.png)
 
 5.  在弹出的对话框中单击**确定**。
 6.  找到目标路由条目，单击**发布**，然后在弹出的对话框中单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155468798741713_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155539446741713_zh-CN.png)
 
 7.  重复以上操作，创建与另一用户网关的IPsec连接。
 
@@ -119,13 +119,13 @@
 2.  选择华东1地域。
 3.  找到目标IPsec连接，然后单击**下载配置**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155468798741714_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155539446741714_zh-CN.png)
 
-4.  根据本地网关设备的配置要求，将下载的配置添加到本地网关设备中。详细说明，请参见[本地网关配置](../../../../../intl.zh-CN/用户指南/配置IPsec-VPN/本地网关配置/华为防火墙配置.md#)。
+4.  根据本地网关设备的配置要求，将下载的配置添加到本地网关设备中。详细说明，请参见[本地网关配置](../../../../intl.zh-CN/用户指南/配置IPsec-VPN/本地网关配置/华为防火墙配置.md#)。
 
     下载配置中的RemoteSubnet和LocalSubnet与创建IPsec连接时的本端网段和对端网段正好是相反的。因为从阿里云VPN网关的角度看，对端是用户IDC的网段，本端是VPC网段；而从本地网关设备的角度看，LocalSubnet就是指本地IDC的网段，RemoteSubnet则是指阿里云VPC的网段。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155468798741715_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155539446741715_zh-CN.png)
 
 
 ## 步骤五 设置路由权重 {#section_d44_shv_fhb .section}

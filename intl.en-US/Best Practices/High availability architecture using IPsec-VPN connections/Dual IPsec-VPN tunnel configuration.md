@@ -6,7 +6,7 @@ This topic describes how to establish two IPsec-VPN tunnels with a VPN Gateway t
 
 You can connect a VPN Gateway with two public IP addresses \(in this example, they are labeled as IP1 and IP2\) to establish two IPsec-VPN connections, and enable health checks. Afterwards, you can set the weights of the corresponding two routes to set one route as the active route and the other route as the standby route. In this way, when the IP1-based Internet link is normal, all traffic between the on-premises data center and the VPC is forwarded only through this connection because it is the active tunnel. When the IP1-based Internet link is abnormal, all traffic between the on-premises data center and the VPC is directed to the standby tunnel.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468799342233_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539447342233_en-US.png)
 
 ## Prerequisites {#section_oth_2mg_xdb .section}
 
@@ -43,7 +43,7 @@ To create a VPN Gateway, follow these steps:
 
     -   **Billing Cycle**: The billing cycle is set to **By Hour** by default.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468799342221_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539447342221_en-US.png)
 
 
 Go back to the VPN Gateways page, select the **China \(Hangzhou\)** region to view the created VPN Gateway.
@@ -68,7 +68,7 @@ Create two customer gateways and register the two public IP addresses of the loc
 
 5.  On the Create Customer Gateway page, click **+ Add** to add another customer gateway.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468799342234_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539447342234_en-US.png)
 
 
 ## Step 3: Create two IPsec-VPN connections {#section_ty2_jnz_wdb .section}
@@ -99,19 +99,19 @@ Create two IPsec-VPN connections to connect the VPN Gateway with the two custome
     -   **Synchronize to VPN Route Table**: Choose whether to synchronize IPsec-VPN traffic routes to the VPN route table. We recommend that you select **Yes**.
 
 -   **Yes**: The IPsec-VPN traffic routes are synchronized to the VPN route table after the IPsec-VPN connection is created.
--   **No**: The IPsec-VPN traffic routes are not synchronized to the VPN route table after the IPsec-VPN connection is created. You need to add gateway routes on the VPN Gateway page. For more information, see [网关路由概述](../../../../../reseller.en-US/User Guide/Manage a VPN Gateway/Configure routes of a VPN Gateway/VPN Gateway route overview.md#).
+-   **No**: The IPsec-VPN traffic routes are not synchronized to the VPN route table after the IPsec-VPN connection is created. You need to add gateway routes on the VPN Gateway page. For more information, see [VPN Gateway route overview](../../../../reseller.en-US/User Guide/Manage a VPN Gateway/Configure routes of a VPN Gateway/VPN Gateway route overview.md#).
     -   **Pre-Shared Key**: Enter the pre-shared key. This value must be the same as that configured in the local gateway.
 
     -   **Health Check**: Enable the health check feature and enter the destination IP address, source IP address, retry interval, and retry times.
 
         Use the default configurations for other parameters.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468799342235_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539447342235_en-US.png)
 
 5.  In the displayed dialog box, click **OK**.
 6.  Find the target route entry, click **Publish** in the **Actions** column, and then in the displayed dialog box, click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468799342236_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539447342236_en-US.png)
 
 7.  Repeat the preceding steps to create another IPsec-VPN connection that connects to the other customer gateway.
 
@@ -123,13 +123,13 @@ To configure the local gateway, follow these steps:
 2.  Select the **China \(Hangzhou\)** region.
 3.  Find the target IPsec-VPN connection and click **Download Configuration**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468799342237_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539447342237_en-US.png)
 
-4.  Configure the local gateway accordingly. For more information, see [本地网关配置](../../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
+4.  Configure the local gateway accordingly. For more information, see [Configure local gateways](../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
 
     The RemoteSubnet and LocalSubnet in the downloaded configurations are the converse in the actual operations of the local network and the remote network you configured when you create the IPsec-VPN connection. Specifically, from the perspective of VPN Gateway, the remote network is the on-premises data center and the local network is the VPC. However, from the perspective of the local gateway, LocalSubnet is the CIDR block of the on-premises data center and RemoteSubnet is the CIDR block of the VPC.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155468799342238_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155539447342238_en-US.png)
 
 
 ## Step 5: Set route weights {#section_d44_shv_fhb .section}
