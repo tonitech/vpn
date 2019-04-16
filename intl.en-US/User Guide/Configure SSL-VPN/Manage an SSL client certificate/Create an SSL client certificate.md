@@ -1,13 +1,13 @@
 # Create an SSL client certificate {#task_llj_prx_bhb .task}
 
-This topic describes how to create an SSL client certificate. After creating an SSL server, you need to create an SSL client certificate.
+This topic describes how to create an SSL client certificate.After creating an SSL server, you need to create an SSL client certificate.
 
-At least one SSL server is created. For more information, see [创建SSL服务端](reseller.en-US/User Guide/Configure SSL-VPN/Manage an SSL server/Create an SSL server.md#).
+At least one SSL server is created. For more information, see [Create an SSL server](reseller.en-US/User Guide/Configure SSL-VPN/Manage an SSL server/Create an SSL server.md#).
 
-1.  Log on to the [VPC console](https://partners-intl.aliyun.com/login-required#/vpc). 
-2.  In the left-side navigation pane, choose **VPN** \> **SSL Clients**. 
-3.  On the SSL Clients page, select a region. 
-4.  Click **Create Client Certificate**. 
+1.  Log on to the [VPC console](https://partners-intl.aliyun.com/login-required#/vpc).
+2.  In the left-side navigation pane, choose **VPN** \> **SSL Clients**.
+3.  On the SSL Clients page, select a region.
+4.  Click **Create Client Certificate**.
 5.  Configure the certificate according to the following information. 
 
     |Configuration|Description|
