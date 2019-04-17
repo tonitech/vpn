@@ -1,64 +1,52 @@
 # Scenarios {#concept_dqh_ysx_wdb .concept}
 
-This topic describes scenarios that implement Alibaba Cloud VPN Gateway. VPN Gateway is an Internet-based service that securely and reliably connects enterprise data centers, office networks, and Internet terminals to Alibaba Cloud VPCs through encrypted channels. VPN Gateways provides flexible configurations to meet the demands of different scenarios.
+## Site-to-site connections {#section_azx_ctx_wdb .section}
 
-## IPsec-VPN scenarios {#section_azx_ctx_wdb .section}
+You can build a hybrid cloud environment by creating an IPsec-VPN tunnel to connect a VPC to your local data center.
 
-**Scenario one: Connect a VPC to an on-premises data center**
+**Note:** IPsec connections require that the IP address ranges of the local data center and the VPC do not conflict with each other. And a static, public IP is configured for the local gateway device.
 
-You can build a hybrid cloud environment by creating an IPsec-VPN tunnel to connect a VPC to your on-premises data center.
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15554636203235_en-US.png)
 
-For more information, see [Configure an IPsec-VPN connection to connect a VPC to an on-premises data center](../../../../../reseller.en-US/IPsec-VPN Quick Start/Create a site-to-site connection through IPsec-VPN.md#).
+## Multi-site connections {#section_czx_ctx_wdb .section}
 
-**Note:** The IP address range of the on-premises data center cannot conflict with that of the VPC, and a static public IP address must be configured for the VPN Gateway of the on-premises data center.
+You can create multiple IPsec connections to connect multiple sites to a VPC. With the VPN-Hub function provided by VPN Gateway, each site not only communicates with the VPC, but can also communicate with each other. VPN-Hub meets the needs of large enterprises to establish an intranet communications between various sites.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15552932173235_en-US.png)
+**Note:** IPsec connections require that the IP address ranges of each site cannot conflict with the IP address range of the VPC to be connected.
 
-**Scenario two: Interconnect two VPCs**
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15554636203236_en-US.png)
 
-You can use a VPN Gateway to create an IPsec-VPN tunnel to interconnect two VPCs.
+**VPC-to-VPC connections**
 
-For more information, see [Create an IPsec connection to interconnect two VPCs](../../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure a VPC-to-VPC connection.md#).
+You can create a connection between two VPCs over an IPsec-VPN tunnel.
 
-**Note:** The VSwitch IP address ranges of the VPCs cannot conflict with each other.
+**Note:** The IP address ranges of the VPCs cannot conflict with each other.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15552932173237_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15554636203237_en-US.png)
 
-**Scenario three: Achieve redundancy with multiple VPN connections**
+## Point-to-site connections {#section_fzx_ctx_wdb .section}
 
-One VPN Gateway is deployed at the Alibaba Cloud side and two customer gateways are deployed at the customer side.
+You can connect a client to a VPC over the SSL-VPN tunnel to meet the needs of working remotely. With SSL-VPN connections, you can securely access applications deployed in a VPC wherever Internet access is available.
 
-The two customer gateways are connected to the VPN Gateway and an IPsec connection is established between each customer gateway and the VPN Gateway. The two IPsec connections are configured with health checks and have succeeded in negotiation. When a customer gateway is declared as unhealthy, traffic is automatically directed to the other customer gateway.
+SSL-VPN connections support remote access from the clients of various operating systems, including Windows, Linux, Mac, IOS, and Android.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/155529321741013_en-US.png)
+**Note:** The IP address range of a client used to access a VPC cannot conflict with the IP address range of the VPC.
 
-**Scenario four: Hub Spoke connection**
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15554636203238_en-US.png)
 
-You can establish secure communications among multiple sites by using the Hub Spoke function to interconnect the sites through the VPN Gateway of the VPC.
+## IPsec-VPN and SSL-VPN connections {#section_hzx_ctx_wdb .section}
 
-For more information, see [Hub Spoke connection](../../../../../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure multi-site connections.md#).
+You can combine the IPsec and SSL-VPN connections to expand your network topology. Once connections are established, the client can access the applications deployed in the connected VPC, and can also access the applications deployed in the connected office sites.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/155529321741054_en-US.png)
+**Note:** All private IP address ranges to be connected cannot conflict with one another.
 
-## SSL-VPN scenarios {#section_tvk_tcp_dhb .section}
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15554636213239_en-US.png)
 
-You can connect a client to a VPC through an SSL-VPN tunnel to meet the needs of remote working. With SSL-VPN connections, you can securely access a VPC through the Internet at anytime, anywhere.
+## Multinational intranet connections \(VPN Gateway and Express Connect\) {#section_jzx_ctx_wdb .section}
 
-SSL-VPN connections support remote access from clients running varioaus operating systems, including Windows, Linux, Mac, IOS, and Android.
+Multinational enterprises can use Express Connect to connect two VPCs with low latency and use VPN Gateway to connect local sites at low cost to build secure and reliable intranet connections.
 
-a
+**Note:** All private IP address ranges to be connected cannot conflict with one another.
 
-For more information, see [Linux client remote access](../../../../../reseller.en-US/SSL-VPN Quick Start/Linux client remote access.md#), [Windows client remote access](../../../../../reseller.en-US/SSL-VPN Quick Start/Window client remote access.md#) and [Mac client remote access](../../../../../reseller.en-US/SSL-VPN Quick Start/Mac client remote access.md#).
-
-**Note:** The IP address ranges of clients cannot conflict with the VSwitch IP address range of the VPC.
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15552932173238_en-US.png)
-
-## Use IPsec-VPN and SSL-VPN together {#section_ynl_fbp_dhb .section}
-
-You can establish both IPsec-VPN and SSL-VPN connections to expand your network topology. After the connections are established, clients can access both the VPC and the connected office networks.
-
-**Note:** All private IP address ranges to be connected cannot conflict with each other.
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15552932173239_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13347/15554636213240_en-US.png)
 
