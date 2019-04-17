@@ -7,6 +7,6 @@
 1.  登录[专有网络管理控制台](https://vpcnext.console.aliyun.com/nat/)。
 2.  在左侧导航栏，单击**VPN** \> **VPN网关**。
 3.  在VPN网关页面，选择VPN网关的地域。
-4.  找到目标VPN网关，单击实例ID/名称列下的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136901/155538278040843_zh-CN.png)图标修改实例名称。 名称长度为2-100个字符，以英文字母或中文开头，可包含数字，下划线（\_）或短横线（-）。
-5.  单击描述列下的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136867/155538278040834_zh-CN.png)图标修改描述信息。 描述信息长度为2-256个字符，不能以http://和https://开头。
+4.  找到目标VPN网关，单击实例ID/名称列下的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136901/155538309040843_zh-CN.png)图标修改实例名称。 名称长度为2-100个字符，以英文字母或中文开头，可包含数字，下划线（\_）或短横线（-）。
+5.  单击描述列下的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136867/155538309040834_zh-CN.png)图标修改描述信息。 描述信息长度为2-256个字符，不能以http://和https://开头。
 
