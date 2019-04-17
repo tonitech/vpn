@@ -20,5 +20,5 @@ Existing VPN Gateways do not support the route-based IPsec-VPN function and rout
 
 Newly created VPN Gateways support the route-based IPsec-VPN function by default. You can view the route table in the details page of a VPN Gateway.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/150978/155546564842114_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/150978/155546575842114_en-US.png)
 
