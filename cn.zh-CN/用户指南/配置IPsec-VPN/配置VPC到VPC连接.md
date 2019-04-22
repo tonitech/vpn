@@ -2,7 +2,7 @@
 
 本文介绍如何使用VPN网关建立VPC到VPC连接，从而两个VPC内的资源可以互访。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558972643319_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558975063319_zh-CN.png)
 
 本操作以同一个账号下的两个VPC为例。如果是跨账号VPC互通，操作步骤和同账号VPC互通一样。只是在创建用户网关前，需要获取对方账号的VPN网关的公网IP地址，然后使用获取的对方账号的公网IP地址创建用户网关。
 
@@ -11,7 +11,7 @@
 |VPC1|172.16.0.0/12|vpc-xxxxz0|ECS1|
 |VPC2|10.0.0.0/8|vpc-xxxxut|ECS2|
 
-**说明：** VPN 网关是基于Internet建立加密隧道进行通信，通信质量依赖Internet。如果对通信质量要求高，可以使用高速通道。详细说明，请参见[同账号VPC互连](../../../../cn.zh-CN/快速入门/同账号VPC互连.md#)和[跨账号VPC互连](../../../../cn.zh-CN/快速入门/跨账号VPC互连.md#)。
+**说明：** VPN 网关是基于Internet建立加密隧道进行通信，通信质量依赖Internet。如果对通信质量要求高，可以使用高速通道，详情参考[同账号VPC互连](../../../../cn.zh-CN/快速入门/同账号VPC互连.md#)和[跨账号VPC互连](../../../../cn.zh-CN/快速入门/跨账号VPC互连.md#)。
 
 ## 开始之前 {#section_q3w_ylz_wdb .section}
 
@@ -39,7 +39,7 @@
 
 **说明：** 本选项只有在选择开启了SSL-VPN功能后才可配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/155589726444632_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13351/15558975063313_zh-CN.png)
 
 5.  重复上述步骤，为另外一个VPC创建一个VPN网关。
 
@@ -47,7 +47,7 @@
 
     **说明：** VPN网关的创建一般需要1-5分钟。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558972643320_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558975063320_zh-CN.png)
 
     本例中分配的公网IP地址为121.xxx.xx.143和118.xxx.xx.149，如下表所示。
 
@@ -110,51 +110,58 @@
 1.  在左侧导航栏，单击**VPN** \> **IPSec连接**。
 2.  选择华东1地域。
 3.  在IPsec连接页面，单击**创建IPsec连接**。
-4.  根据以下信息配置IPsec连接，然后单击**确定**。
+4.  根据以下信息配置IPsec连接：
     -   **名称**：输入IPsec连接的名称。
 
     -   **VPN网关**： 选择已创建的VPN网关。本例先选择VPC1的VPN网关vpn-xxxxxqwj。
 
     -   **用户网关**：选择使用对端VPN网关的公网IP地址创建的用户网关。本例选择VPC2的用户网关user\_VPC2。
 
-    -   **本端网段**：输入已选VPN网关所属VPC的网段，本例输入VPC1的网段172.16.0.0/12。也可单击**+添加 本端网段**添加多个本端网段。
+        。
 
-        **说明：** 只有IKE V2版本下才可以配置多网段。
+    -   **本端网段**：输入已选VPN网关所属VPC的网段。本例输入VPC1的网段172.16.0.0/12。
 
-    -   **对端网段**：输入对端VPC的网段，本例输入VPC2的网段10.0.0.0/8。也可单击**+添加 对端网段**添加多个对端网段。
+    -   **对端网段**：输入对端VPC的网段。本例输入VPC2的网段10.0.0.0/8。
 
-        **说明：** 只有IKE V2版本下才可以配置多网段。
-
-    -   **是否立即生效**：选择是否删除当前已协商成功的IPsec隧道并重新发起协商。
-
--   是：配置完成后立即进行协商。
--   否：当有流量进入时进行协商。
-    -   **同步到VPN路由表**：选择是否将兴趣流同步到VPN路由表，推荐选择是。
-
--   是：IPsec连接创建完成后，兴趣流同步到VPN路由表。
--   否：IPsec连接创建完成后，兴趣流未同步到VPN路由表，您还需前往VPN网关页面添加网关路由。详细说明，请参见[网关路由概述](cn.zh-CN/用户指南/管理VPN网关/配置VPN网关路由/网关路由概述.md#)。
     -   **预共享密钥**：输入一个共享密钥，本例输入1234567。两个IPsec连接的共享密钥必须相同。
 
-    -   **健康检查**：开启健康检查并输入目的IP、源IP、重试间隔和重试次数。
-
-5.  在弹出的对话框中单击**确定**。
-
-6.  找到目标路由条目，单击**发布**，然后在弹出的对话框中单击**确定**。
-
-7.  重复上述步骤，为另外一个VPC创建一个IPsec连接。
+5.  重复上述步骤，为另外一个VPC创建一个IPsec连接。
 
     本操作中，VPC1的IPsec连接配置如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558972643321_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558975063321_zh-CN.png)
 
     本操作中，VPC2的IPsec连接配置如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558972643322_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558975063322_zh-CN.png)
 
 
-## 步骤四 测试私网通信 {#section_ojw_ylz_wdb .section}
+## 步骤四 设置路由 {#section_k1m_cpz_wdb .section}
+
+1.  在左侧导航栏，单击**路由表**。
+2.  选择连接的VPC的所属地域。本例为华东1。
+3.  找到VPC1，然后单击**管理**。
+4.  在路由表页面，单击**添加路由条目**。
+5.  根据以下信息配置路由条目，然后单击**确定**。
+    -   **目标网段**：输入要连接的对端VPC的网段。本例输入VPC2的网段，即10.0.0.0/8。
+
+    -   **下一跳类型**：选择VPN网关。
+
+    -   **VPN网关**：选择本VPC部署的VPN网关。本例选择VPC1创建的VPN网关。
+
+6.  重复上述步骤，为 VPC2 添加一条目标网段为172.16.0.0/12，下一跳为 VPC2 的 VPN 网关的路由条目
+
+    本例的路由配置如下表所示。
+
+    |VPC|目标网段|下一跳类型|下一跳|
+    |:--|:---|:----|:--|
+    |VPC1|10.0.0.0/8|VPN网关|VPC1的VPN网关，本例为vpn-xxxxxqwj|
+    |VPC2|172.16.0.0/12|VPN网关|VPC2的VPN网关，本例为vpn-xxxxxl5z|
+
+
+## 步骤五 测试私网通信 {#section_ojw_ylz_wdb .section}
 
 在专有网络VPC1内的ECS1实例上ping ECS2 实例的私网IP，测试两个VPC的私网通信。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558972643323_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558975063323_zh-CN.png)
 
