@@ -8,17 +8,17 @@ The VPN-Hub function is enabled by default. To achieve multi-site connections, y
 
 The following scenario is used to illustrate connecting office sites in the cities of Shanghai, Hangzhou, and Ningbo. Before you begin, make sure that you have obtained the public IP address of the gateway device for each office site.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13370/15380447863592_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13370/15558969433592_en-US.png)
 
 As shown in the following figure, to connect the three office sites \(Shanghai, Hangzhou, and Ningbo\), you only need to create a VPN Gateway and three customer gateways and establish three IPsec connections.
 
 **Note:** Make sure the IP address ranges of all the connected sites do not conflict with each other.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13370/15380447863593_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13370/15558969433593_en-US.png)
 
 ## Step 1. Create a VPN Gateway {#section_u5j_zwf_xdb .section}
 
-Create a customer gateway using the public IP address configured for the local gateway in the Shanghai office. For more information, see [Manage a VPN Gateway](../../../../reseller.en-US/User Guide/Manage a VPN Gateway.md#).
+Create a customer gateway using the public IP address configured for the local gateway in the Shanghai office. For more information, see [EN-US\_TP\_13357.md\#](intl.en-US/User Guide/Manage a VPN Gateway/Create a VPN Gateway.md#).
 
 **Note:** Make sure the IPsec-VPN function is enabled.
 
@@ -26,11 +26,11 @@ Create a customer gateway using the public IP address configured for the local g
 
 1.  Create a customer gateway using the public IP address configured for the local gateway in the Shanghai office.
 
-    For more information, see [Create a customer gateway](../../../../reseller.en-US/User Guide/Manage a customer gateway.md#section_mwf_lxc_xdb).
+    For more information, see [EN-US\_TP\_13358.md\#section\_mwf\_lxc\_xdb](intl.en-US/User Guide/Configure IPsec-VPN connections/Manage a customer gateway/Create a customer gateway.md#section_mwf_lxc_xdb).
 
 2.  Create an IPsec connection.
 
-    Create an IPsec connection to connect the VPN Gateway and the customer gateway. For more information, see [Create an IPsec connection](../../../../reseller.en-US/User Guide/Manage an IPsec connection.md#section_mxd_fyc_xdb).
+    Create an IPsec connection to connect the VPN Gateway and the customer gateway. For more information, see [EN-US\_TP\_13359.md\#section\_mxd\_fyc\_xdb](intl.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#section_mxd_fyc_xdb).
 
     -   **Local network**: 0.0.0.0/0.
 
@@ -40,7 +40,7 @@ Create a customer gateway using the public IP address configured for the local g
 
 3.  Configure the local gateway according to the configured IPsec connections.
 
-    Download the configurations of the IPsec connection, then configure the local gateway.  For more information, see [Local gateway configurations](reseller.en-US/Best Practices/Local gateway configurations.md#).
+    Download the configurations of the IPsec connection, then configure the local gateway.  For more information, see [Configure local gateways](intl.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways.md#).
 
 
 ## Step 3: Create additional IPsec connections for the other two sites {#section_dfp_jxf_xdb .section}
