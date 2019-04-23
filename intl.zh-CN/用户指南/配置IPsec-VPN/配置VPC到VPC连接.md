@@ -2,12 +2,12 @@
 
 本文介绍如何使用VPN网关建立VPC到VPC连接，从而两个VPC内的资源可以互访。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558974373319_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15560136513319_zh-CN.png)
 
 本操作以同一个账号下的两个VPC为例。如果是跨账号VPC互通，操作步骤和同账号VPC互通一样。只是在创建用户网关前，需要获取对方账号的VPN网关的公网IP地址，然后使用获取的对方账号的公网IP地址创建用户网关。
 
-|VPC名称|VPC名称|VPC ID|VPC ID|
-|:----|:----|:-----|:-----|
+|VPC名称|VPC网段|VPC ID|ECS名称|
+|:----|:----|:-----|:----|
 |VPC1|172.16.0.0/12|vpc-xxxxz0|ECS1|
 |VPC2|10.0.0.0/8|vpc-xxxxut|ECS2|
 
@@ -39,7 +39,7 @@
 
 **说明：** 本选项只有在选择开启了SSL-VPN功能后才可配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/155589743744632_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/155601365144632_zh-CN.png)
 
 5.  重复上述步骤，为另外一个VPC创建一个VPN网关。
 
@@ -47,7 +47,7 @@
 
     **说明：** VPN网关的创建一般需要1-5分钟。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558974373320_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15560136513320_zh-CN.png)
 
     本例中分配的公网IP地址为121.xxx.xx.143和118.xxx.xx.149，如下表所示。
 
@@ -145,16 +145,16 @@
 
     本操作中，VPC1的IPsec连接配置如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558974373321_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15560136513321_zh-CN.png)
 
     本操作中，VPC2的IPsec连接配置如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558974373322_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15560136513322_zh-CN.png)
 
 
 ## 步骤四 测试私网通信 {#section_ojw_ylz_wdb .section}
 
 在专有网络VPC1内的ECS1实例上ping ECS2 实例的私网IP，测试两个VPC的私网通信。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15558974373323_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13352/15560136533323_zh-CN.png)
 
