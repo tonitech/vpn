@@ -15,9 +15,11 @@ The following sections take a USG series device from Huawei as an example to des
 |Upstream Internet interface|10GE1/0/0|
 |Downstream intranet interface|10GE1/0/1|
 
+**Note:** If the on-premises data center is associated with multiple CIDR blocks that need to connect with a VPC, we recommend that you create an equivalent number of IPsec-VPN connections on Alibaba Cloud so that each CIDR block of the on-premises data center is connected with a VPC CIDR block.
+
 ## Configure an IKEv1 VPN {#section_d12_sfd_xdb .section}
 
-**Prerequisites**
+**Prerequisites** 
 
 -   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [EN-US\_TP\_13359.md\#](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
 
@@ -40,7 +42,7 @@ The following sections take a USG series device from Huawei as an example to des
 |Negotiation Mode|esp|
 
 
-**Procedure**
+ **Procedure** 
 
 To load customer gateway configurations to the USG series Huawei device, follow these steps:
 
@@ -64,7 +66,7 @@ To load customer gateway configurations to the USG series Huawei device, follow 
 
 ## Configure an IKEv2 VPN {#section_uxm_djd_xdb .section}
 
-**Prerequisites**
+**Prerequisites** 
 
 -   An IPsec-VPN connection is created in the Alibaba Cloud VPC.
 
