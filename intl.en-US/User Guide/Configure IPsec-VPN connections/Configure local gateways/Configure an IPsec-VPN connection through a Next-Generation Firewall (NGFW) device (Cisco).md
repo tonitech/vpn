@@ -1,6 +1,6 @@
 # Configure an IPsec-VPN connection through a Next-Generation Firewall \(NGFW\) device \(Cisco\) {#concept_h4z_jdd_xdb .concept}
 
-This topic takes a Next-Generation Firewall \(NGFW\) device from Cisco as an example to show how to configure the VPN settings to connect an on-premises data center to Alibaba Cloud VPC. When using IPsec-VPN to create a site-to-site connection, you must configure the local gateway according to the IPsec connection configured for the Alibaba Cloud VPN Gateway.
+This topic takes a Next-Generation Firewall \(NGFW\) device from Cisco as an example to show how to configure the VPN settings to connect an on-premises data center to Alibaba Cloud VPC. When using IPsec-VPN to create a site-to-site connection, you must configure the local gateway according to the IPsec-VPN connection configured for the Alibaba Cloud VPN Gateway.
 
 The following table lists the network configurations of the VPC and the on-premises data center used in this example.
 
@@ -10,6 +10,8 @@ The following table lists the network configurations of the VPC and the on-premi
 |Public IP address of the gateway|47.xxx.xxx.161|
 |On-premises data center|Intranet CIDR block|10.10.10.0/24|
 |Public IP address of the firewall|124.xxx.xxx.171|
+
+**Note:** If the on-premises data center is associated with multiple CIDR blocks that need to connect with a VPC, we recommend that you create an equivalent number of IPsec-VPN connections on Alibaba Cloud so that each CIDR block of the on-premises data center is connected with a VPC CIDR block.
 
 ## Configure an IKEv1 VPN {#section_d12_sfd_xdb .section}
 
