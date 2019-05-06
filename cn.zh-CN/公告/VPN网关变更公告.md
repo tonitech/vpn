@@ -20,5 +20,5 @@
 
 您新建的VPN网关，默认支持基于路由的IPsec-VPN功能。您可以在VPN网关详情页中查看如下路由表：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/150978/155546564542114_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/150978/155712991542114_zh-CN.png)
 
