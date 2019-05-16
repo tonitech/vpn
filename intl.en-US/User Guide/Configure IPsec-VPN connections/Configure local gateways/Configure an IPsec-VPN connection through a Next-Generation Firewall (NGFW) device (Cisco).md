@@ -6,7 +6,7 @@ The following table lists the network configurations of the VPC and the on-premi
 
 |Configuration|Example value|
 |:------------|:------------|
-|VPC|VSwitch CIDR block|192.168.10.0/24、192.168.11.0/24|
+|VPC|VSwitch CIDR block|192.168.10.0/24, 192.168.11.0/24|
 |Public IP address of the gateway|47.xxx.xxx.161|
 |On-premises data center|Intranet CIDR block|10.10.10.0/24|
 |Public IP address of the firewall|124.xxx.xxx.171|
