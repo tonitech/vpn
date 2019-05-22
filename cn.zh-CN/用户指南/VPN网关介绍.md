@@ -1,6 +1,6 @@
 # VPN网关介绍 {#concept_zlb_mvx_bhb .concept}
 
-VPN网关是一款基于Internet，通过加密通道将企业数据中心、企业办公网络、或Internet终端和阿里云专有网络（VPC）安全可靠连接起来的服务。VPN网关提供IPsec-VPN连接、SSL-VPN连接和GRE-VPN连接。
+VPN网关是一款基于Internet，通过加密通道将企业数据中心、企业办公网络、或Internet终端和阿里云专有网络（VPC）安全可靠连接起来的服务。VPN网关提供IPsec-VPN连接和SSL-VPN连接。
 
 ## IPsec-VPN功能介绍 {#section_mgt_bgj_dhb .section}
 
@@ -15,10 +15,4 @@ IPsec-VPN可满足不同的应用场景。详细说明，请参见[IPsec-VPN使�
 您可以使用SSL-VPN功能从客户端远程接入VPC中部署的应用和服务。部署完成后，您仅需要在客户端中加载证书发起连接即可。
 
 SSL-VPN可满足不同的应用场景。详细说明，请参见[SSL-VPN使用场景](../../../../cn.zh-CN/产品简介/使用场景.md#section_tvk_tcp_dhb)。
-
-## GRE-VPN功能介绍 {#section_hsn_8s1_8rk .section}
-
-GRE-VPN采用隧道（Tunnel）技术，通过逻辑隧道接口建立虚拟的点对点连接，隧道接口间提供一条通路，使封装的数据报能够在这条通路上传输，并在隧道的两端分别对数据报进行封装和解封装。
-
-GRE-VPN可满足不同的应用场景。详细说明，请参见[GRE-VPN使用场景](../../../../cn.zh-CN/产品简介/使用场景.md#section_3qk_qau_nfe)。
 
