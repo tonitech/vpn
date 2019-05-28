@@ -7,7 +7,7 @@
 -   当物理专线正常时，本地数据中心与VPC之间的所有流量只通过物理专线转发。
 -   当物理专线异常时，本地数据中心与VPC之间的所有流量切换至VPN线路。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136915/155902938541822_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136915/155902941941822_zh-CN.png)
 
 ## 前提条件 {#section_n4r_fqp_fhb .section}
 
@@ -45,7 +45,7 @@
 
     -   **计费周期**：选择购买时长。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155902938542221_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/155902941942221_zh-CN.png)
 
 5.  返回VPN网关页面，选择**华东1**地域，查看创建的VPN网关。
 
@@ -77,6 +77,9 @@
     -   **名称**：输入IPsec连接的名称。
     -   **VPN网关**： 选择已创建的VPN网关。
     -   **用户网关**：选择要连接的用户网关。
+    -   **立即生效**：选择是否立即生效IPsec连接。
+        -   是：配置完成后立即进行协商。
+        -   否：当有流量进入时进行协商。
     -   **预共享密钥**：输入共享密钥，该值必须与用于本地网关设备的值匹配。
     -   **健康检查**：开启健康检查并输入目的IP、源IP、重试间隔和重试次数。
 
@@ -91,13 +94,13 @@
 2.  选择华东1地域。
 3.  找到目标IPsec连接，然后单击**下载配置**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902938541714_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902941941714_zh-CN.png)
 
 4.  根据本地网关设备的配置要求，将下载的配置添加到本地网关设备中。详细说明，请参见[本地网关配置](../../../../cn.zh-CN/用户指南/配置IPsec-VPN/本地网关配置/华为防火墙配置.md#)。
 
     下载配置中的RemotSubnet和LocalSubnet与创建IPsec连接时的本端网段和对端网段正好是相反的。因为从阿里云VPN网关的角度看，对端是用户IDC的网段，本端是VPC网段；而从本地网关设备的角度看，LocalSubnet就是指本地IDC的网段，RemotSubnet则是指阿里云VPC的网段。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902938541715_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902941941715_zh-CN.png)
 
 
 ## 步骤五 配置VPN网关路由 {#section_uqo_aj4_lp5 .section}
