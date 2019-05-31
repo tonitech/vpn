@@ -4,7 +4,7 @@ VPN网关是一款基于Internet，通过加密通道将企业数据中心、企
 
 **说明：** 阿里云VPN网关在国家相关政策法规内提供服务，不提供访问Internet功能。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13431/15571288163233_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13431/15592651563233_zh-CN.png)
 
 ## 功能 {#section_c4z_jsx_wdb .section}
 
@@ -16,7 +16,7 @@ VPN网关提供IPsec-VPN和SSL-VPN功能：
 
     您可以使用IPsec-VPN将本地数据中心和专有网络连接起来，或连接两个VPC。IPsec-VPN支持IKEv1和IKEv2协议。只要支持这两种协议的设备都可以和阿里云VPN网关互连，比如华为、华三、山石、深信服、Cisco ASA、Juniper、SonicWall、Nokia、IBM 和 Ixia等。
 
-    详细说明，请参见[配置站点到站点连接](../../../../cn.zh-CN/IPsec-VPN入门/建立站点到站点连接.md#)和[配置VPC到VPC连接](../../../../cn.zh-CN/用户指南/配置IPsec-VPN/配置VPC到VPC连接.md#)。
+    详细说明，请参见[配置站点到站点连接](../../../../cn.zh-CN/IPsec-VPN入门/建立VPC到本地数据中心的连接.md#)和[配置VPC到VPC连接](../../../../cn.zh-CN/用户指南/配置IPsec-VPN/建立VPC到VPC的连接.md#)。
 
 -   SSL-VPN
 
