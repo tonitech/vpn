@@ -7,7 +7,7 @@
 -   当物理专线正常时，本地数据中心与VPC之间的所有流量只通过物理专线转发。
 -   当物理专线异常时，本地数据中心与VPC之间的所有流量切换至VPN线路。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136915/155712974841822_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136915/155902946441822_zh-CN.png)
 
 ## 前提条件 {#section_n4r_fqp_fhb .section}
 
@@ -43,7 +43,7 @@
 
     -   **计费周期**：选择购买时长。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155712974841710_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902946441710_zh-CN.png)
 
 5.  返回VPN网关页面，选择**华东1**地域，查看创建的VPN网关。
 
@@ -94,12 +94,12 @@
 
         其他选项使用默认配置。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155712974841712_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902946441712_zh-CN.png)
 
 5.  在弹出的对话框中单击**确定**。
 6.  找到目标路由条目，单击**发布**，然后在弹出的对话框中单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155712974841713_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902946441713_zh-CN.png)
 
 
 ## 步骤四 在本地网关设备中加载VPN配置 {#section_ptn_44z_wdb .section}
@@ -110,13 +110,13 @@
 2.  选择华东1地域。
 3.  找到目标IPsec连接，然后单击**下载配置**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155712974841714_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902946441714_zh-CN.png)
 
 4.  根据本地网关设备的配置要求，将下载的配置添加到本地网关设备中。详细说明，请参见[本地网关配置](../../../../cn.zh-CN/用户指南/配置IPsec-VPN/本地网关配置/华为防火墙配置.md#)。
 
     下载配置中的RemotSubnet和LocalSubnet与创建IPsec连接时的本端网段和对端网段正好是相反的。因为从阿里云VPN网关的角度看，对端是用户IDC的网段，本端是VPC网段；而从本地网关设备的角度看，LocalSubnet就是指本地IDC的网段，RemotSubnet则是指阿里云VPC的网段。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155712974841715_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/155902946441715_zh-CN.png)
 
 
 ## 步骤五 配置VBR专线健康检查 {#section_bkr_hnp_fhb .section}
