@@ -16,7 +16,7 @@ http://Endpoint/?Action=xx&Parameters
 
 -   Endpoint：VPN网关API 的服务接入地址为`vpc.aliyuncs.com`。
 -   Action：要执行的操作，如使用CreateVpnGateway创建VPN网关。
--   Version：要使用的API版本，弹性公网IP的API版本是2016-04-28。
+-   Version：要使用的API版本，VPN网关的API版本是2016-04-28。
 -   Parameters：请求参数，每个参数之间用&分隔。
 
     请求参数由公共请求参数和API自定义参数组成。公共参数中包含API版本号、身份验证等信息。详细信息，请参见[公共参数](../../../../cn.zh-CN/API参考/公共参数.md#)。
