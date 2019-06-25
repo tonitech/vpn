@@ -45,12 +45,7 @@ When using IPsec-VPN to create a site-to-site connection, you must configure the
 
     Configure the IPsec protocol according to the information of the IPsec connection configured for the Alibaba Cloud VPN Gateway.
 
-6.  Choose **Policy** \> **Security Policy** \> **Create** to create the uplink security policy and downlink security policy. 
-
-    The security policy configuration from the Alibaba Cloud VPC to the on-premises data center is shown in the following figure.
-
-    The security policy configuration from the on-premises data center to the Alibaba Cloud VPC is shown in the following figure.
-
+6.  Choose **Policy** \> **Security Policy** \> **Create** to create the uplink security policy and downlink security policy.
 7.  Choose **Network** \> **Route** \> **Static Route**.
 8.  Add the default route, set the uplink interface as the next hop of the outbound traffic. In this tutorial, no configuration is required.
 
