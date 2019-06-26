@@ -1,0 +1,69 @@
+# IPsec-VPN配合云企业网搭建高速全球网络 {#concept_mgb_qxf_xdb .concept}
+
+对于跨国企业，可以利用云企业网（CEN）降低跨国线路延迟，利用VPN网关低成本解决最后一公里接入和终端接入问题，构建跨国企业网络。
+
+## 案例分析 {#section_b3k_sxf_xdb .section}
+
+大型跨国公司经常有在多个国家部署应用系统并与世界各地的办公运维系统互连的需求，例如某企业需要在美国东部和上海分别部署两套应用系统，同时与位于各地的办公地点互连，如下图所示。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/156152135641627_zh-CN.png)
+
+## 方案概述 {#section_a3r_yxf_xdb .section}
+
+对于全球办公地点间的通信需求，传统的解决方案和问题如下表所示。
+
+|传统解决方案|问题|
+|:-----|:-|
+|通过Internet直接通信|内部数据直接暴露在Internet上且Internet的网络质量无法保证。|
+|通过IPsec VPN通信|安全性高但是通信仍基于Internet，跨国通信时网络质量受Internet影响。|
+|通过专线直连|安全性高且网络质量好，但成本极高。|
+
+阿里云提供一种安全性高、网络质量好且成本相对较低的解决方案，即通过VPN网关和云企业网连接世界各地的应用系统和办公地点。
+
+如下图所示，若要实现美国东部和上海各办公点间的互连需求，您可以分别在美国东部和上海的VPC内部署应用系统，VPC间通过云企业网连接，两个地域的办公地点通过IPsec-VPN分别接入到两个VPC的VPN网关，实现全球办公网络互联。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136914/156152135641628_zh-CN.png)
+
+## 前提条件 {#section_il5_z3p_fhb .section}
+
+-   已部署好云上环境即创建了VPC和交换机，并部署了相关应用。
+
+-   各办公点已经部署了本地网关，且配置了一个静态公网IP。
+
+-   需要互连的各网段不能冲突。
+
+
+## 步骤一 创建美国东部办公点的IPsec连接 {#section_e5z_gyf_xdb .section}
+
+1.  为美国东部的VPC创建一个VPN网关。详细说明，请参见[创建VPN网关](../../../../intl.zh-CN/用户指南/管理VPN网关/创建VPN网关.md#section_zv3_nyf_xdb)。
+2.  创建两个用户网关，将办公地点网关设备的公网IP地址注册到用户网关中用于建立IPsec连接。
+
+    用户网关的IP地址是办公地点网关设备的公网IP地址。详细说明，请参见[创建用户网关](../../../../intl.zh-CN/用户指南/管理用户网关/创建用户网关.md#section_mwf_lxc_xdb)。
+
+3.  创建两个IPsec连接，将VPN网关和用户网关连接起来。详细说明，请参见[创建IPsec连接](../../../../intl.zh-CN/用户指南/配置IPsec-VPN/管理IPsec连接/创建IPsec连接.md#section_mxd_fyc_xdb)。
+4.  在本地办公地点网关设备中加载VPN配置。
+
+    根据本地办公地点网关设备的要求，加载VPN配置。详细说明，请参见[本地网关配置](../../../../intl.zh-CN/用户指南/配置IPsec-VPN/本地网关配置/华为防火墙配置.md#)。
+
+5.  配置VPN网关路由。详细说明，请参见[网关路由概述](../../../../intl.zh-CN/用户指南/管理VPN网关/配置VPN网关路由/网关路由概述.md#)。
+
+## 步骤二 创建上海办公点的IPsec连接 {#section_btz_tyf_xdb .section}
+
+参见步骤一，创建上海办公点与VPC之间的IPsec连接。
+
+## 步骤三 连接VPC {#section_sr3_5yf_xdb .section}
+
+您可以通过云企业网功能，连接两个地域的VPC。详细说明，请参见[教程概览](../../../../intl.zh-CN/快速入门/教程概览.md#)。
+
+## 步骤四 在CEN中宣告路由 {#section_qvl_djp_fhb .section}
+
+您可以将VPC中指向VPN网关的路由发布到CEN中，CEN中其他加载的网络实例便可以学习到该条路由。
+
+详细信息，请参见[发布路由到CEN](../../../../intl.zh-CN/用户指南/管理路由/管理网络实例路由.md#section_qts_1ct_q2b)。
+
+## 步骤五 配置安全组 {#section_ks3_w1g_xdb .section}
+
+根据您的业务需求，为部署应用系统的ECS实例配置安全组规则。
+
+至此各个办公地点与应用系统间的连接建立完成，办公地点与应用系统间可以进行安全、高效的内网通信。
+
