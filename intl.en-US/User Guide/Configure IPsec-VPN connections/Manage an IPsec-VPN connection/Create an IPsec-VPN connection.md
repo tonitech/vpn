@@ -1,6 +1,6 @@
 # Create an IPsec-VPN connection {#task_llj_prx_bhb .task}
 
-This topic describes how to create an IPsec-VPN connection. After creating a VPN Gateway and a customer gateway, you can create an IPsec-VPN connection to establish an encrypted tunnel for communication.
+This topic describes how to create an IPsec-VPN connection. After you create a VPN Gateway and a customer gateway, you can create an IPsec-VPN connection to establish an encrypted communication tunnel.
 
 1.   Log on to the [VPC console](https://partners-intl.aliyun.com/login-required#/vpc). 
 2.   In the left-side navigation pane, choose **VPN** \> **IPsec Connections**. 
@@ -17,21 +17,32 @@ This topic describes how to create an IPsec-VPN connection. After creating a VPN
  |
     | **VPN Gateway** |Select the VPN Gateway to connect.|
     | **Customer Gateway** |Select the customer gateway to connect.|
+    | **Local Network** |Enter the CIDR block of the VPC to be connected with the on-premises data center. This parameter is used for phase two negotiation.|
+    | **+ Add Local Network** |Add multiple CIDR blocks of the VPC to be connected with the on-premises data center. **Note:** If multiple CIDR blocks are entered, the IKEv2 version must be selected.
+
+ |
+    | **Remote Network** |Enter the CIDR block of the on-premises data center to be connected with the VPC. This parameter is used for phase two negotiation.|
+    | **+ Add Remote Network** |Add multiple CIDR blocks of the on-premises data center to be connected with the VPC. **Note:** If multiple CIDR blocks are entered, the IKEv2 version must be selected.
+
+ |
+    | **Effective Immediately** |Indicates whether the IPsec-VPN connection takes effect immediately.     -    **Yes**: Start the negotiation immediately once the configuration is complete.
+    -    **No**: Start the negotiation only when traffic is detected in the tunnel.
+ |
     | **Advanced Configuration: IKE Configurations** |
     | **Pre-Shared Key** |Enter the pre-shared key used for the authentication between the VPN Gateway and the customer gateway. By default, it is an automatically generated value. But you can also specify a pre-shared key.|
     | **Version** |Select the IKE version to use. Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multiple-CIDR-block scenarios. We recommend that you select the IKE V2 protocol.|
     | **Negotiation Mode** |Select the negotiation mode of the IKEv1.     -   Main mode: The negotiation process features high security.
     -   Aggressive mode: The negotiation is fast and the success rate of negotiation is high.
  After the negotiation succeeds, the information transmission security is the same for the two modes.|
-    | **Encryption Algorithm** |Select an encryption algorithm used by phase one negotiation from the following options: aes, aes192, aes256, des, and 3des.|
-    | **Authentication Algorithm** |Select an authentication algorithm used by phase one negotiation from the following options: sha1, md5, sha256, sha384, and sha512.|
+    | **Encryption Algorithm** |Select an encryption algorithm used by phase one negotiation. Valid values: aes, aes192, aes256, des, 3des.|
+    | **Encryption Algorithm** |Select an authentication algorithm used by phase one negotiation. Valid values: sha1, md5, sha256, sha384, sha512.|
     | **DH Group** |Select a Diffie-Hellman key exchange algorithm used by phase one negotiation.|
     | **SA Life Cycle \(seconds\)** |Set the SA lifecycle for phase one negotiation. The default value is 86,400 seconds.|
     | **LocalId** |It is the identification of the VPN Gateway used for phase one negotiation. The default value is the public IP address of the VPN Gateway. If you set the LocalId in the FQDN format, we recommend that you change the negotiation mode to the aggressive mode.|
     | **RemoteId** |It is the identification of the customer gateway used for the first-stage negotiation. The default value is the public IP address of the customer gateway. If you set the RemoteId in the FQDN format, we recommend that you change the negotiation mode to the aggressive mode.|
     | **Advanced Configuration: IPSec Configurations** |
-    | **Encryption Algorithm** |Select the encryption algorithm of phase two negotiation. Valid values: aes, aes192, aes256, des, or 3des.|
-    | **Authentication Algorithm** |Select an authentication algorithm used by phase two negotiation. Valid values: sha1, md5, sha256, sha384, and sha512.|
+    | **Encryption Algorithm** |Select the encryption algorithm of phase two negotiation. Valid values: aes, aes192, aes256, des, 3des.|
+    | **Authentication Algorithm** |Select an authentication algorithm used by phase two negotiation. Valid values: sha1, md5, sha256, sha384, sha512.|
     | **DH Group** |Select a Diffie-Hellman key exchange algorithm used by phase two negotiation.     -   If you select any group that are not disabled, the PFS feature is enabled by default \(perfect forward secrecy\), so the key must be updated for each renegotiation and PFS must be enabled on the client.
     -   For clients that do not support PFS, select Disabled.
  |
