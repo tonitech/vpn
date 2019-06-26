@@ -7,15 +7,15 @@ The following table lists the network configurations of the VPC and the on-premi
 |Configuration|Example value|
 |:------------|:------------|
 |VPC|VSwitch CIDR block|192.168.10.0/24, 192.168.11.0/24|
-|Public IP address of the gateway|47.xxx.xxx.161|
+|Public IP address of the gateway|47. xxx. xxx.161|
 |On-premises data center|Intranet CIDR block|10.10.10.0/24|
-|Public IP address of the firewall|124.xxx.xxx.171|
+|Public IP address of the firewall|124. xxx. xxx.171|
 
 **Note:** If the on-premises data center is associated with multiple CIDR blocks that need to connect with a VPC, we recommend that you create an equivalent number of IPsec-VPN connections on Alibaba Cloud so that each CIDR block of the on-premises data center is connected with a VPC CIDR block.
 
 ## Configure an IKEv1 VPN {#section_d12_sfd_xdb .section}
 
-**Prerequisites** 
+ **Prerequisites** 
 
 -   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [Create an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
 
@@ -31,7 +31,7 @@ The following table lists the network configurations of the VPC and the on-premi
 |Negotiation Mode|main|
 |PSK|123456|
 |IPsec|Authentication Algorithm|SHA-1|
-|Encryption Algorithm|AES-128|
+|Authentication Algorithm|AES-128|
 |DH Group|group 2|
 |IKE Version|IKE v1|
 |SA Life Cycle|86400|
@@ -57,7 +57,7 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 3.  Configure the pre-shared key.
 
     ```
-    crypto isakmp key 123456 address 47.xxx.xxx.161
+    crypto isakmp key 123456 address 47.xxx.xxx. 161
     ```
 
 4.  Configure the IPsec protocol.
@@ -80,7 +80,7 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 
     ```
     crypto map ipsecpro64 10 ipsec-isakmp
-    set peer 47.xxx.xxx.161
+    set peer 47.xxx.xxx. 161
     set transform-set ipsecpro64
     set pfs group2
     match address 100
@@ -96,8 +96,8 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 8.  Configure static routes.
 
     ```
-    ip route 192.168.10.0 255.255.255.0 47.xxx.xxx.161
-    ip route 192.168.20.0 255.255.255.0 47.xxx.xxx.161
+    ip route 192.168.10.0 255.255.255.0 47.xxx.xxx. 161
+    ip route 192.168.20.0 255.255.255.0 47.xxx.xxx. 161
     ```
 
 9.  Test the connectivity.
@@ -107,11 +107,11 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 
 ## Configure an IKEv2 VPN {#section_uxm_djd_xdb .section}
 
-**Prerequisites** 
+ **Prerequisites** 
 
 -   An IPsec-VPN connection is created in an Alibaba Cloud VPC. For more information, see [Create an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Create an IPsec-VPN connection.md#).
 
--   The configuration of the IPsec-VPN connection is downloaded. For more information, see [Download the configuration of an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Download the configuration of an IPsec-VPN connection.md#). The configurations in the following table are used in this example.
+-   The configurations of the IPsec-VPN connection are downloaded. For more information, see [Download the configuration of an IPsec-VPN connection](reseller.en-US/User Guide/Configure IPsec-VPN connections/Manage an IPsec-VPN connection/Download the configuration of an IPsec-VPN connection.md#). The configurations in the following table are used in this example.
 
     |Protocol|Configuration|Example value|
     |:-------|:------------|:------------|
@@ -135,7 +135,7 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 To load customer gateway configurations to the NGFW device from Cisco, follow these steps:
 
 1.  Log on to the CLI of the NGFW device.
-2.  Configure the first-stage IKE algorithm.
+2.  Configure the phase one IKE algorithm.
 
     ```
     crypto ikev2 proposal daemon 
@@ -156,7 +156,7 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
     ```
     crypto ikev2 keyring ipsecpro64_v2 
     peer vpngw 
-    address 47.xxx.xxx.161
+    address 47.xxx.xxx. 161
     pre-shared-key 0 123456
     ```
 
@@ -164,7 +164,7 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 
     ```
     crypto ikev2 profile ipsecpro64_v2
-    match identity remote address 47.xxx.xxx.161 255.255.255.255
+    match identity remote address 47.xxx.xxx. 161 255.255.255.255
     identity local address 10.10.10.1 
     authentication remote pre-share     
     authentication local pre-share 
@@ -178,7 +178,7 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
     mode tunnel
     ```
 
-7.  Configure the Access Control List \(ACL\) and define the data flow to be protected.
+7.  Configure the ACL \(access control list\) and define the data stream to be protected.
 
     **Note:** If multiple CIDR blocks are configured in the local gateway device, you need to add ACL policies for each CIDR block.
 
@@ -191,7 +191,7 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 
     ```
     crypto map ipsecpro64_v2 10 ipsec-isakmp
-    set peer 47.xxx.xxx.161
+    set peer 47.xxx.xxx. 161
     set transform-set ipsecpro64_v2 
     set ikev2-profile ipsecpro64_v2
     match address 100
@@ -207,8 +207,8 @@ To load customer gateway configurations to the NGFW device from Cisco, follow th
 10. Configure static routes.
 
     ```
-    ip route 192.168.10.0 255.255.255.0 47.xxx.xxx.161
-    ip route 192.168.20.0 255.255.255.0 47.xxx.xxx.161
+    ip route 192.168.10.0 255.255.255.0 47.xxx.xxx. 161
+    ip route 192.168.20.0 255.255.255.0 47.xxx.xxx. 161
     ```
 
 11. Test the connectivity.
