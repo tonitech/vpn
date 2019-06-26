@@ -2,9 +2,9 @@
 
 This topic describes how to delete an IPsec-VPN connection.
 
-1.  Log on to the [VPC console](https://partners-intl.aliyun.com/login-required#/vpc). 
-2.  In the left-side navigation pane, choose **VPN** \> **IPsec Connections**. 
-3.  On the IPsec Connections page, select the region of the target IPsec-VPN connection. 
-4.  Find the target connection, and click **Edit** in the **Actions** column. 
-5.  In the displayed dialog box, click **OK**. 
+1.   Log on to the [VPC console](https://partners-intl.aliyun.com/login-required#/vpc). 
+2.  In the left-side navigation pane, choose **VPN** \> **IPsec Connections**.
+3.  Select a region.
+4.   On the IPsec Connections page, find the target IPsec-VPN connection, and click **Delete** in the **Actions** column. 
+5.   In the displayed dialog box, click **OK**. 
 
