@@ -4,8 +4,8 @@ This topic describes how to download an SSL client certificate. To use the SSL-V
 
 An SSL client certificate is created. For more information, see [Create an SSL client certificate](reseller.en-US/User Guide/Configure SSL-VPN/Manage an SSL client certificate/Create an SSL client certificate.md#).
 
-1.  Log on to the [VPC console](https://partners-intl.aliyun.com/login-required#/vpc).
-2.  In the left-side navigation pane, choose **VPN** \> **SSL Clients**.
-3.  On the SSL Clients page, select the region of the target certificate.
-4.  Find the target certificate, and click **Download** in the **Actions** column.
+1.   Log on to the [VPC console](https://partners-intl.aliyun.com/login-required#/vpc). 
+2.   In the left-side navigation pane, click **VPN** \> **SSL Clients**. 
+3.   Select the target region. 
+4.   On the SSL Clients page, find the target client certificate and click **Download** in the **Actions** column. 
 
