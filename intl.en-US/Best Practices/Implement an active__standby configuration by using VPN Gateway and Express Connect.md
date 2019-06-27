@@ -7,7 +7,7 @@ You can connect your on-premises data center to an Alibaba Cloud VPC through bot
 -   When the physical connection works normally, the traffic between the on-premises data center and the VPC is forwarded through the physical connection.
 -   When the physical connection is abnormal, the traffic between the on-premises data center and the VPC is directed to the IPsec-VPN tunnel.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136915/156152141241822_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136915/156161396541822_en-US.png)
 
 ## Prerequisites {#section_n4r_fqp_fhb .section}
 
@@ -58,19 +58,24 @@ Create a customer gateway and register the public IP address of the local gatewa
 
 ## Step 3: Create an IPsec-VPN connection {#section_ty2_jnz_wdb .section}
 
-Create an IPsec-VPN connection to connect the VPN Gateway with the customer gateway. To do so, follow these steps:
+To create an IPsec-VPN connection, follow these steps:
 
 1.  In the left-side navigation pane, choose **VPN** \> **IPsec Connections**.
-2.  Select the China \(Hangzhou\) region.
+2.  Select a region.
 3.  On the IPsec Connections page, click **Create IPsec Connection**.
 4.  Configure the IPsec-VPN connection according to the following information and click **OK**.
     -    **Name**: Enter the name of the IPsec-VPN connection.
     -    **VPN Gateway**: Select the created VPN Gateway.
     -    **Customer Gateway**: Select the created customer gateway.
+    -    **Local Network**: Enter the IP address range of the VPC to which the selected VPN Gateway belongs.
+    -    **Destination CIDR Block**: Enter the CIDR block of the local data center.
+    -    **Effective Immediately**: Select whether to start the negotiation immediately.
+        -   Yes: Start the negotiation immediately once the configuration is complete.
+        -   No: Start the negotiation only when traffic is detected in the tunnel.
     -    **Pre-Shared Key**: Enter a pre-shared key. This value must be the same as the one configured in the local gateway.
     -    **Health Check**: Enable health checks and enter the destination IP address, source IP address, retry interval, and number of retries.
 
-        Use the default configurations for other options.
+        Use the default configurations for other parameters.
 
 
 ## Step 4: Configure the local gateway {#section_zqs_g2p_z1x .section}
