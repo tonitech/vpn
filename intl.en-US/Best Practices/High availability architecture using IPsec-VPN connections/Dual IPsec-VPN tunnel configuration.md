@@ -9,7 +9,7 @@ You can connect a VPN Gateway with two public IP addresses \(in this example, th
 -   In this way, when the IP1-based Internet link is normal, all traffic between the on-premises data center and the VPC is forwarded only through this connection because it is the active tunnel.
 -   When the IP1-based Internet link is abnormal, all traffic between the on-premises data center and the VPC is directed to the standby tunnel.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/156152126541844_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/156161886541844_en-US.png)
 
 ## Prerequisites {#section_oth_2mg_xdb .section}
 
@@ -61,7 +61,7 @@ Create two customer gateways and register the two public IP addresses of the loc
     -    **Description**: Enter a description of the customer gateway.
 5.  On the Create Customer Gateway page, click **+ Add** to add multiple customer gateways.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156152126541711_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156161886541711_en-US.png)
 
 
 ## Step 3: Create an IPsec-VPN connection {#section_ty2_jnz_wdb .section}
@@ -90,13 +90,13 @@ To configure the local gateway, follow these steps:
 2.  Select the China \(Hangzhou\) region.
 3.  Find the target IPsec connection and click **Download Configuration**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156152126541714_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156161886541714_en-US.png)
 
 4.  Configure the local gateway accordingly. For more information, see [Local gateway configuration](../reseller.en-US/User Guide/Configure IPsec-VPN connections/Configure local gateways/Configure an IPsec-VPN connection through a USG series Next-Generation Firewall device (Huawei).md#).
 
     The RemoteSubnet and LocalSubnet in the downloaded configurations are the converse in the actual operations of the local network and the remote network you configured when you create the IPsec-VPN connection. Specifically, from the perspective of VPN Gateway, the remote network is the on-premises data center and the local network is the VPC. However, from the perspective of the local gateway, LocalSubnet is the CIDR block of the on-premises data center and RemoteSubnet is the CIDR block of the VPC.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156152126541715_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156161886541715_en-US.png)
 
 
 ## Step 5: Configure a route for the VPN Gateway {#section_jhd_yfa_nyk .section}

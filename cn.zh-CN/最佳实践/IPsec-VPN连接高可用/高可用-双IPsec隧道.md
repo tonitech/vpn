@@ -9,7 +9,7 @@
 -   当基于IP1的Internet链路正常时，本地数据中心与VPC之间的所有流量只通过主隧道转发。
 -   当基于IP1的Internet链路异常时，本地数据中心与VPC之间的所有流量切换到备用隧道。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/156152713141844_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136912/156161885341844_zh-CN.png)
 
 ## 前提条件 {#section_oth_2mg_xdb .section}
 
@@ -61,7 +61,7 @@
     -    **描述**：输入用户网关的描述信息。
 5.  在创建用户网关页面，单击**+添加**添加另一用户网关。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156152713141711_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156161885441711_zh-CN.png)
 
 
 ## 步骤三 创建IPsec连接 {#section_ty2_jnz_wdb .section}
@@ -95,13 +95,13 @@
 2.  选择IPsec连接的地域。
 3.  找到目标IPsec连接，然后单击**下载配置**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156152713141714_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156161885441714_zh-CN.png)
 
 4.  根据本地网关设备的配置要求，将下载的配置添加到本地网关设备中。详细说明，请参见[本地网关配置](../intl.zh-CN/用户指南/配置IPsec-VPN/本地网关配置/华为防火墙配置.md#)。
 
     下载配置中的RemoteSubnet和LocalSubnet与创建IPsec连接时的本端网段和对端网段正好是相反的。因为从阿里云VPN网关的角度看，对端是用户IDC的网段，本端是VPC网段；而从本地网关设备的角度看，LocalSubnet就是指本地IDC的网段，RemoteSubnet则是指阿里云VPC的网段。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156152713141715_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/136913/156161885441715_zh-CN.png)
 
 
 ## 步骤五 配置VPN网关路由 {#section_jhd_yfa_nyk .section}
