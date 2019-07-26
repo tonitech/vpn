@@ -22,6 +22,20 @@ VPN网关提供如下API供您使用。VPN网关的API服务地址为`vpc.aliyun
 |[DescribeCustomerGateway](../../../../cn.zh-CN/API参考/VPN网关/DescribeCustomerGateway.md#)|查询已创建的用户网关的详细信息。|
 |[DeleteCustomerGateway](../../../../cn.zh-CN/API参考/VPN网关/DeleteCustomerGateway.md#)|删除指定的用户网关。|
 
+## VPN网关路由 {#section_nr2_z9n_wrn .section}
+
+|API|说明|
+|---|--|
+|[CreateVpnRouteEntry](../../../../cn.zh-CN/API参考/VPN网关/CreateVpnRouteEntry.md#)|创建VPN目的路由。|
+|[CreateVpnPbrRouteEntry](../../../../cn.zh-CN/API参考/VPN网关/CreateVpnPbrRouteEntry.md#)|创建VPN策略路由。|
+|[PublishVpnRouteEntry](../../../../cn.zh-CN/API参考/VPN网关/PublishVpnRouteEntry.md#)|发布VPN路由到VPC。|
+|[DescribeVpnRouteEntries](../../../../cn.zh-CN/API参考/VPN网关/DescribeVpnRouteEntries.md#)|查询VPN目的路由。|
+|[DescribeVpnPbrRouteEntries](../../../../cn.zh-CN/API参考/VPN网关/DescribeVpnPbrRouteEntries.md#)|查询VPN策略路由。|
+|[ModifyVpnRouteEntryWeight](../../../../cn.zh-CN/API参考/VPN网关/ModifyVpnRouteEntryWeight.md#)|修改VPN目的路由的权重值。|
+|[ModifyVpnPbrRouteEntryWeight](../../../../cn.zh-CN/API参考/VPN网关/ModifyVpnPbrRouteEntryWeight.md#)|修改VPN策略路由的权重值。|
+|[DeleteVpnRouteEntry](../../../../cn.zh-CN/API参考/VPN网关/DeleteVpnRouteEntry.md#)|删除VPN目的路由。|
+|[DeleteVpnPbrRouteEntry](../../../../cn.zh-CN/API参考/VPN网关/DeleteVpnPbrRouteEntry.md#)|删除VPN策略路由。|
+
 ## IPsec-VPN {#section_9t0_ay4_pr4 .section}
 
 |API|说明|
@@ -44,5 +58,6 @@ VPN网关提供如下API供您使用。VPN网关的API服务地址为`vpc.aliyun
 |[CreateSslVpnClientCert](../../../../cn.zh-CN/API参考/VPN网关/CreateSslVpnClientCert.md#)|创建SSL-VPN客户端证书。|
 |[ModifySslVpnClientCert](../../../../cn.zh-CN/API参考/VPN网关/ModifySslVpnClientCert.md#)|修改SSL-VPN客户端证书的名称。|
 |[DescribeSslVpnClientCerts](../../../../cn.zh-CN/API参考/VPN网关/DescribeSslVpnClientCerts.md#)|查询已创建的SSL-VPN客户端证书。|
+|[DescribeVpnSslServerLogs](../../../../cn.zh-CN/API参考/VPN网关/DescribeVpnSslServerLogs.md#)|查询SSL服务端的日志。|
 |[DeleteSslVpnClientCert](../../../../cn.zh-CN/API参考/VPN网关/DeleteSslVpnClientCert.md#)|删除SSL-VPN客户端证书。|
 
