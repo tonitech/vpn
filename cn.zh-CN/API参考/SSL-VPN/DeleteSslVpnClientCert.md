@@ -1,10 +1,10 @@
-# DeleteSslVpnClientCert {#doc_api_951836 .reference}
+# DeleteSslVpnClientCert {#doc_api_Vpc_DeleteSslVpnClientCert .reference}
 
 调用DeleteSslVpnClientCert接口删除SSL-VPN客户端证书。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Vpc&api=DeleteSslVpnClientCert)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Vpc&api=DeleteSslVpnClientCert&type=RPC&version=2016-04-28)
 
 ## 请求参数 {#parameters .section}
 
@@ -20,7 +20,7 @@
  您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
 
  |
-|SslVpnClientCertId|String|是|vsc-bp1n8wcf134yl0osrcg98|SSL-VPN客户端证书的ID。
+|SslVpnClientCertId|String|是|vsc-bp1n8wcf134yl0osr\*\*\*\*|SSL-VPN客户端证书的ID。
 
  |
 |ClientToken|String|否|02fb3da4-130e-11e9-8e44-0016e04115b| 
@@ -31,7 +31,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -47,7 +47,7 @@
 
 https://vpc.aliyuncs.com/?Action=DeleteSslVpnClientCert
 &RegionId=cn-hangzhou
-&SslVpnClientCertId=vsc-bp1n8wcf134yl0osrcg98
+&SslVpnClientCertId=vsc-bp1n8wcf134yl0osr****
 &<公共请求参数>
 
 ```
@@ -58,9 +58,8 @@ https://vpc.aliyuncs.com/?Action=DeleteSslVpnClientCert
 
 ``` {#xml_return_success_demo}
 <DeleteSslVpnClientCertResponse>
-  <RequestId>606998F0-B94D-48FE-8316-ACA81BB230DA</RequestId>
+      <RequestId>606998F0-B94D-48FE-8316-ACA81BB230DA</RequestId>
 </DeleteSslVpnClientCertResponse>
-
 ```
 
 `JSON` 格式
@@ -79,5 +78,5 @@ https://vpc.aliyuncs.com/?Action=DeleteSslVpnClientCert
 |403|Forbidden|User not authorized to operate on the specified resource.|您没有权限操作指定资源，请提交工单咨询。|
 |400|VpnGateway.Configuring|The specified service is configuring.|服务正在配置中，请您稍后再试。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Vpc)
+访问[错误中心](https://error-center.aliyun.com/status/product/Vpc)查看更多错误码。
 
