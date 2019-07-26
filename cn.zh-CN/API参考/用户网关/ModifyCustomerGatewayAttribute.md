@@ -1,10 +1,10 @@
-# ModifyCustomerGatewayAttribute {#doc_api_951825 .reference}
+# ModifyCustomerGatewayAttribute {#doc_api_Vpc_ModifyCustomerGatewayAttribute .reference}
 
 调用ModifyCustomerGatewayAttribute接口修改用户网关的名称和描述信息。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Vpc&api=ModifyCustomerGatewayAttribute)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Vpc&api=ModifyCustomerGatewayAttribute&type=RPC&version=2016-04-28)
 
 ## 请求参数 {#parameters .section}
 
@@ -15,7 +15,7 @@
  取值： **ModifyCustomerGatewayAttribute**。
 
  |
-|CustomerGatewayId|String|是|vpn-bp1q8bgx4xnkm2ogj0fiu|用户网关的ID。
+|CustomerGatewayId|String|是|vpn-bp1q8bgx4xnkm2ogj\*\*\*\*|用户网关的ID。
 
  |
 |RegionId|String|是|cn-shanghai|用户网关所在的地域。
@@ -23,21 +23,27 @@
  您可以通过调用[DescribeRegions](~~36063~~)接口获取地域ID。
 
  |
-|ClientToken|String|否|02fb3da4-130e-11e9-8e44-0016e04115b|用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过 64 个 ASCII 字符。 
+|ClientToken|String|否|02fb3da4-130e-11e9-8e44-0016e04115b|用于保证请求的幂等性。
+
+ 由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过 64 个 ASCII 字符。 
 
  |
-|Description|String|否|test|用户网关的描述信息。 长度为 2-256个字符，必须以字母或中文开头，但不能以`http://` 或`https://`开头。
+|Description|String|否|test|用户网关的描述信息。
+
+ 长度为 2-256个字符，必须以字母或中文开头，但不能以`http://` 或`https://`开头。
 
  |
-|Name|String|否|test|用户网关的名称。 长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（\_）和短横线（-）。但不能以`http://`或`https://`开头。
+|Name|String|否|test|用户网关的名称。
+
+ 长度为 2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（\_）和短横线（-）。但不能以`http://`或`https://`开头。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|CustomerGatewayId|String|cgw-bp1pvpl9r9adju6l5nxck|用户网关的ID。
+|CustomerGatewayId|String|cgw-bp1pvpl9r9adju6l5\*\*\*\*|用户网关的ID。
 
  |
 |Name|String|test|用户网关的名称。
@@ -46,7 +52,7 @@
 |Description|String|test|用户网关的描述信息。
 
  |
-|IpAddress|String|139.196.32.167|用户网关的IP地址。
+|IpAddress|String|139.196.32.xxx|用户网关的IP地址。
 
  |
 |CreateTime|Long|1492747187000|用户网关的创建时间。
@@ -63,7 +69,7 @@
 ``` {#request_demo}
 
 https://vpc.aliyuncs.com/?Action=ModifyCustomerGatewayAttribute
-&CustomerGatewayId=vpn-bp1q8bgx4xnkm2ogj0fiu
+&CustomerGatewayId=vpn-bp1q8bgx4xnkm2ogj****
 &RegionId=cn-shanghai
 &Name=test
 &<公共请求参数>
@@ -76,22 +82,21 @@ https://vpc.aliyuncs.com/?Action=ModifyCustomerGatewayAttribute
 
 ``` {#xml_return_success_demo}
 <ModifyCustomerGatewayAttributeResponse>
-  <CustomerGatewayId>cgw-bp1pvpl9r9adju6l5nxck</CustomerGatewayId>
-  <RequestId>E61293C8-AF07-4E87-A272-542680038F93</RequestId>
-  <CreateTime>1492747187000</CreateTime>
-  <IpAddress>139.196.32.167</IpAddress>
+      <CustomerGatewayId>cgw-bp1pvpl9r9adju6l5****</CustomerGatewayId>
+      <RequestId>E61293C8-AF07-4E87-A272-542680038F93</RequestId>
+      <CreateTime>1492747187000</CreateTime>
+      <IpAddress>139.196.32.xxx</IpAddress>
 </ModifyCustomerGatewayAttributeResponse>
-
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"CustomerGatewayId":"cgw-bp1pvpl9r9adju6l5nxck",
+	"CustomerGatewayId":"cgw-bp1pvpl9r9adju6l5****",
 	"CreateTime":1492747187000,
 	"RequestId":"8AA5CE21-2E6A-4530-BDF5-F055849476E6",
-	"IpAddress":"139.196.32.167"
+	"IpAddress":"139.196.32.xxx"
 }
 ```
 
@@ -105,5 +110,5 @@ https://vpc.aliyuncs.com/?Action=ModifyCustomerGatewayAttribute
 |400|InvalidName|The name is not valid|该名称格式不合法。|
 |400|InvalidDescription|The description is not valid|描述格式不合法。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Vpc)
+访问[错误中心](https://error-center.aliyun.com/status/product/Vpc)查看更多错误码。
 
