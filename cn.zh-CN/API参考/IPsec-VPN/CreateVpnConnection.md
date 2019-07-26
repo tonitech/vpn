@@ -2,18 +2,20 @@
 
 调用CreateVpnConnection接口创建IPsec连接。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Vpc&api=CreateVpnConnection)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Vpc&api=CreateVpnConnection&type=RPC&version=2016-04-28)
 
 ## 请求参数 {#parameters .section}
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|CreateVpnConnection|要执行的操作，取值： **CreateVpnConnection**。
+|Action|String|是|CreateVpnConnection|要执行的操作。
+
+ 取值： **CreateVpnConnection**。
 
  |
-|CustomerGatewayId|String|是|vpn-bp1q8bgx4xnkxxxxxxxx|用户网关的ID。
+|CustomerGatewayId|String|是|vpn-bp1q8bgx4xnk\*\*\*\*|用户网关的ID。
 
  |
 |LocalSubnet|String|是|1.1.1.0/24,1.1.2.0/24|需要和本地IDC互连的VPC侧的网段，用于第二阶段协商。
@@ -29,16 +31,21 @@
  多个网段之间用逗号分隔，例如：192.168.3.0/24,192.168.4.0/24。
 
  |
-|VpnGatewayId|String|是|vpn-bp1q8bgx4xnkmxxxxxxxx|VPN网关的ID。
+|VpnGatewayId|String|是|vpn-bp1q8bgx4xnkm\*\*\*\*|VPN网关的ID。
 
  |
-|ClientToken|String|否|02fb3da4-130e-11e9-8e44-001xxxxxxxx|客户端token，用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。
+|ClientToken|String|否|02fb3da4-130e-11e9-8e44-001\*\*\*\*|客户端token，用于保证请求的幂等性。
+
+ 由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符。
 
  |
 |EffectImmediately|Boolean|否|false|是否删除当前已协商成功的IPsec隧道并重新发起协商。取值：
 
  -   **true**：配置完成后立即进行协商。
 -   **false**（默认值）：当有流量进入时进行协商。
+
+ |
+|HealthCheckConfig|String|否|Enable|是否开启健康检查配置。
 
  |
 |IkeConfig|String|否|ikev1|第一阶段协商的配置信息：
@@ -62,15 +69,17 @@
 -   **IpsecConfig. IpsecLifetime**：第二阶段协商出的SA的生存周期。取值范围为**0-86400**，单位为秒，默认值：**86400**。
 
  |
-|Name|String|否|IPsec|IPsec连接的名称。长度为2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（\_）和短横线（-），但不能以`http://`或`https://`开头。
+|Name|String|否|IPsec|IPsec连接的名称。
+
+ 长度为2-128个字符，必须以字母或中文开头，可包含数字，点号（.），下划线（\_）和短横线（-），但不能以`http://`或`https://`开头。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|VpnConnectionId|String|vco-bp15oes1py4i6xxxxxxxx|IPsec连接的ID。
+|VpnConnectionId|String|vco-bp15oes1py4i6\*\*\*\*|IPsec连接的ID。
 
  |
 |CreateTime|Long|1544666102000|IPsec连接的创建时间。
@@ -89,12 +98,12 @@
 
 ``` {#request_demo}
 
-https://vpc.aliyuncs.com/?Action=CreateVpnConnection
-&CustomerGatewayId=vpn-bp1q8bgx4xnkxxxxxxxx
+http(s)://[Endpoint]/?Action=CreateVpnConnection
+&CustomerGatewayId=vpn-bp1q8bgx4xnk****
 &LocalSubnet=1.1.1.0/24,1.1.2.0/24
 &RegionId=cn-shanghai
 &RemoteSubnet=1.1.1.0/24,1.1.2.0/24
-&VpnGatewayId=vpn-bp1q8bgx4xnkmxxxxxxxx
+&VpnGatewayId=vpn-bp1q8bgx4xnkm****
 &<公共请求参数>
 
 ```
@@ -105,17 +114,16 @@ https://vpc.aliyuncs.com/?Action=CreateVpnConnection
 
 ``` {#xml_return_success_demo}
 <CreateVpnConnectionResponse>
-  <VpnConnectionId>vco-bp1bbi27hojx8xxxxxxxx</VpnConnectionId>
-  <CreateTime>1493363928000</CreateTime>
+      <VpnConnectionId>vco-bp1bbi27hojx8****</VpnConnectionId>
+      <CreateTime>1493363928000</CreateTime>
 </CreateVpnConnectionResponse>
-
 ```
 
 `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
-	"VpnConnectionId":"vco-bp15oes1py4i6xxxxxxxx",
+	"VpnConnectionId":"vco-bp15oes1py4i6****",
 	"CreateTime":1544666102000
 }
 ```
@@ -133,5 +141,5 @@ https://vpc.aliyuncs.com/?Action=CreateVpnConnection
 |400|VpnGateway.Configuring|The specified service is configuring.|服务正在配置中，请您稍后再试。|
 |400|VpnGateway.FinancialLocked|The specified service is financial locked.|该服务已欠费，请您先充值再操作。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Vpc)
+访问[错误中心](https://error-center.aliyun.com/status/product/Vpc)查看更多错误码。
 
