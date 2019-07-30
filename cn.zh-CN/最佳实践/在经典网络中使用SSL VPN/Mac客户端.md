@@ -1,6 +1,6 @@
 # Mac客户端 {#concept_qrk_klg_xdb .concept}
 
-本文将介绍如何使用VPN网关的SSL-VPN功能从Linux客户端远程访问部署在经典网络中的云资源。
+本文将介绍如何使用VPN网关的SSL-VPN功能从Mac客户端远程访问部署在经典网络中的云资源。
 
 如果您已经配置了SSL-VPN，您仅需要根据文档中步骤五的步骤将经典网络中的ECS实例连接到VPC即可实现通过SSL-VPN远程接入经典网络的需求。
 
